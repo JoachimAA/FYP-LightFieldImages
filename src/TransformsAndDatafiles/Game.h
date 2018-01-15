@@ -4,6 +4,8 @@
 #define GAME_H
 
 #include <SFML\Graphics.hpp>
+#include <SFML\Audio.hpp>
+#include "SoundManager.h"
 
 	using namespace std;
 
@@ -17,6 +19,10 @@
 		void render();
 	private:
 
+		bool play = true;
+
+
+		SoundManager m_soundManager;
 		sf::RenderWindow window;
 
 	};

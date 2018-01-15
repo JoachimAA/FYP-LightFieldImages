@@ -14,6 +14,7 @@ Game::Game() :
 
 void Game::load()
 {
+	m_soundManager.loadSound();
 	run();
 }
 
@@ -45,5 +46,11 @@ void Game::update()
 
 void Game::render()
 {
+	if (play)
+	{
+		m_soundManager.playSound();
+		play = false;
+	}
+
 	window.display();
 }
