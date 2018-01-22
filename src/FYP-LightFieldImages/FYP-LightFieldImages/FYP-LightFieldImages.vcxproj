@@ -120,10 +120,12 @@
     <ClCompile Include="..\..\TransformsAndDatafiles\Game.cpp" />
     <ClCompile Include="..\..\TransformsAndDatafiles\main.cpp" />
     <ClCompile Include="..\..\TransformsAndDatafiles\SoundManager.cpp" />
+    <ClCompile Include="MenuButton.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\TransformsAndDatafiles\Game.h" />
     <ClInclude Include="..\..\TransformsAndDatafiles\SoundManager.h" />
+    <ClInclude Include="MenuButton.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

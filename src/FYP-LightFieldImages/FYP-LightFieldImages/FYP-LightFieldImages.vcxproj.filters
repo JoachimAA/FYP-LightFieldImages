@@ -24,12 +24,18 @@
     <ClCompile Include="..\..\TransformsAndDatafiles\SoundManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="MenuButton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\TransformsAndDatafiles\Game.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\TransformsAndDatafiles\SoundManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuButton.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
