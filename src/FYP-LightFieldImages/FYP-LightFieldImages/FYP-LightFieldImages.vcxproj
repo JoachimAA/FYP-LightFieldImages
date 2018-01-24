@@ -119,13 +119,19 @@
   <ItemGroup>
     <ClCompile Include="..\..\TransformsAndDatafiles\Game.cpp" />
     <ClCompile Include="..\..\TransformsAndDatafiles\main.cpp" />
+    <ClCompile Include="..\..\TransformsAndDatafiles\MenuButton.cpp" />
+    <ClCompile Include="..\..\TransformsAndDatafiles\Scene.cpp" />
+    <ClCompile Include="..\..\TransformsAndDatafiles\SceneManager.cpp" />
     <ClCompile Include="..\..\TransformsAndDatafiles\SoundManager.cpp" />
-    <ClCompile Include="MenuButton.cpp" />
+    <ClCompile Include="..\..\TransformsAndDatafiles\SplashScreen.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\TransformsAndDatafiles\Game.h" />
+    <ClInclude Include="..\..\TransformsAndDatafiles\MenuButton.h" />
+    <ClInclude Include="..\..\TransformsAndDatafiles\Scene.h" />
+    <ClInclude Include="..\..\TransformsAndDatafiles\SceneManager.h" />
     <ClInclude Include="..\..\TransformsAndDatafiles\SoundManager.h" />
-    <ClInclude Include="MenuButton.h" />
+    <ClInclude Include="..\..\TransformsAndDatafiles\SplashScreen.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
