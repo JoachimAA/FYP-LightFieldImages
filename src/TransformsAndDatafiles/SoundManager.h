@@ -11,6 +11,7 @@ class SoundManager {
 
 public:
 	
+	
 	void loadSound();
 	void playSound();
 

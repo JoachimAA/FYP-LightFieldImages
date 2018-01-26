@@ -15,9 +15,11 @@ Game::Game() :
 void Game::load()
 {
 
-	m_menu.load();
-	//m_button.setUp(580.0f, 250.0f, 120.0f, 50.0f);
+
+	m_menu.load(window.getSize().x,window.getSize().y);
+	//m_sceneManager->addScene(m_menu);
 	m_soundManager.loadSound();
+
 	run();
 }
 

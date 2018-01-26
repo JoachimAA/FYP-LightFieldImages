@@ -25,8 +25,9 @@ using namespace std;
 
 		bool play = true;
 
-		//MenuButton m_button;
-		SplashScreen * m_menu;
+
+		SplashScreen m_menu;
+
 
 		SceneManager* m_sceneManager;
 		SoundManager m_soundManager;
