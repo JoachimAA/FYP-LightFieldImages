@@ -16,12 +16,20 @@ void Game::load()
 {
 
 
-	m_menu.load(window.getSize().x,window.getSize().y);
-	//m_sceneManager->addScene(m_menu);
+	m_menu.load();
+
+	//adding scenes for game
+	m_sceneManager.addScene(m_menu);
+	m_sceneManager.addScene(level1);
+
+	//loading the current scene
+	//m_sceneManager->loadScene();
+
 	m_soundManager.loadSound();
 
 	run();
 }
+
 
 void Game::run()
 {
@@ -54,12 +62,25 @@ void Game::update(sf::RenderWindow &window)
 		play = false;
 	}
 //	m_button.mouseClicked(window);
-	m_menu.update(window);
+
+	//update current scene
+	//m_sceneManager->updateScene(window);
+
+	
+
+	if (m_menu.update(window))
+	{
+//		level1.load();
+	}
 }
 
 void Game::render(sf::RenderWindow &window)
 {
 	//m_button.render(window);
+
+	//render the current scene
+	//m_sceneManager->renderScene(window);
+
 	m_menu.render(window);
 	//render window
 	window.display();

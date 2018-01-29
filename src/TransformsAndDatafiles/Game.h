@@ -9,6 +9,7 @@
 #include "MenuButton.h"
 #include "SceneManager.h"
 #include "SplashScreen.h"
+#include "GameScene.h"
 
 
 using namespace std;
@@ -27,9 +28,11 @@ using namespace std;
 
 
 		SplashScreen m_menu;
+		GameScene level1;
 
+		Scene m_currentScene;
 
-		SceneManager* m_sceneManager;
+		SceneManager m_sceneManager;
 		SoundManager m_soundManager;
 		MenuButton * m_menuButton;
 

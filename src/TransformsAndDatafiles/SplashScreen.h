@@ -2,18 +2,19 @@
 #include "Scene.h"
 #include "MenuButton.h"
 #include "Background.h"
+#include "SceneManager.h"
 
 class SplashScreen : public Scene
 {
 public:
-	void load(float sizeX, float sizeY);
+	void load();
 	void render(sf::RenderWindow &window);
-	void update(sf::RenderWindow &window);
+	bool update(sf::RenderWindow &window);
 
 	MenuButton m_playButton;
 	Background m_background;
 
 private:
 
-	
+	 
 };

@@ -1,0 +1,147 @@
+﻿'FYP-LightFieldImages.exe' (Win32): Loaded 'D:\Third Year Work\FYP\FYP- LightFieldImages\src\FYP-LightFieldImages\Debug\FYP-LightFieldImages.exe'. Symbols loaded.
+'FYP-LightFieldImages.exe' (Win32): Loaded 'C:\Windows\SysWOW64\ntdll.dll'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Loaded 'C:\Windows\SysWOW64\kernel32.dll'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Unloaded 'C:\Windows\SysWOW64\kernel32.dll'
+'FYP-LightFieldImages.exe' (Win32): Loaded 'C:\Windows\SysWOW64\kernel32.dll'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Loaded 'C:\Windows\SysWOW64\KernelBase.dll'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Loaded 'D:\Third Year Work\FYP\FYP- LightFieldImages\bin\SFML\sfml-graphics-d-2.dll'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Loaded 'D:\Third Year Work\FYP\FYP- LightFieldImages\bin\SFML\sfml-window-d-2.dll'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Unloaded 'D:\Third Year Work\FYP\FYP- LightFieldImages\bin\SFML\sfml-window-d-2.dll'
+'FYP-LightFieldImages.exe' (Win32): Loaded 'D:\Third Year Work\FYP\FYP- LightFieldImages\bin\SFML\sfml-system-d-2.dll'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Loaded 'D:\Third Year Work\FYP\FYP- LightFieldImages\bin\SFML\sfml-audio-d-2.dll'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Loaded 'C:\Windows\SysWOW64\vcruntime140d.dll'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Loaded 'C:\Windows\SysWOW64\ucrtbased.dll'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Loaded 'C:\Windows\SysWOW64\opengl32.dll'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Loaded 'C:\Windows\SysWOW64\msvcrt.dll'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Loaded 'C:\Windows\SysWOW64\advapi32.dll'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Loaded 'C:\Windows\SysWOW64\sechost.dll'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Loaded 'C:\Windows\SysWOW64\rpcrt4.dll'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Loaded 'C:\Windows\SysWOW64\sspicli.dll'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Loaded 'C:\Windows\SysWOW64\cryptbase.dll'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Loaded 'C:\Windows\SysWOW64\bcryptprimitives.dll'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Loaded 'C:\Windows\SysWOW64\user32.dll'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Loaded 'C:\Windows\SysWOW64\win32u.dll'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Loaded 'C:\Windows\SysWOW64\gdi32.dll'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Loaded 'C:\Windows\SysWOW64\gdi32full.dll'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Loaded 'C:\Windows\SysWOW64\msvcp_win.dll'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Loaded 'C:\Windows\SysWOW64\ucrtbase.dll'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Loaded 'C:\Windows\SysWOW64\winmm.dll'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Loaded 'C:\Windows\SysWOW64\msvcp140d.dll'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Unloaded 'C:\Windows\SysWOW64\msvcp140d.dll'
+'FYP-LightFieldImages.exe' (Win32): Loaded 'C:\Windows\SysWOW64\OpenAL32.dll'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Loaded 'C:\Windows\SysWOW64\msvcp140d.dll'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Unloaded 'C:\Windows\SysWOW64\msvcp140d.dll'
+'FYP-LightFieldImages.exe' (Win32): Loaded 'C:\Windows\SysWOW64\glu32.dll'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Loaded 'C:\Windows\SysWOW64\winmmbase.dll'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Loaded 'C:\Windows\SysWOW64\msvcp140d.dll'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Unloaded 'C:\Windows\SysWOW64\msvcp140d.dll'
+'FYP-LightFieldImages.exe' (Win32): Loaded 'C:\Windows\SysWOW64\cfgmgr32.dll'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Loaded 'D:\Third Year Work\FYP\FYP- LightFieldImages\bin\SFML\sfml-window-d-2.dll'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Loaded 'C:\Windows\SysWOW64\msvcp140d.dll'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Unloaded 'C:\Windows\SysWOW64\msvcp140d.dll'
+'FYP-LightFieldImages.exe' (Win32): Loaded 'C:\Windows\SysWOW64\msvcp140d.dll'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Unloaded 'C:\Windows\SysWOW64\msvcp140d.dll'
+'FYP-LightFieldImages.exe' (Win32): Loaded 'C:\Windows\SysWOW64\msvcp140d.dll'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Loaded 'C:\Windows\SysWOW64\imm32.dll'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Loaded 'C:\Windows\SysWOW64\uxtheme.dll'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Loaded 'C:\Windows\SysWOW64\combase.dll'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Loaded 'C:\Windows\SysWOW64\msctf.dll'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Loaded 'C:\Windows\SysWOW64\oleaut32.dll'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Loaded 'C:\Windows\SysWOW64\nvoglv32.dll'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Loaded 'C:\Windows\SysWOW64\shell32.dll'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Loaded 'C:\Windows\SysWOW64\SHCore.dll'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Loaded 'C:\Windows\SysWOW64\windows.storage.dll'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Loaded 'C:\Windows\SysWOW64\shlwapi.dll'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Loaded 'C:\Windows\SysWOW64\kernel.appcore.dll'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Loaded 'C:\Windows\SysWOW64\powrprof.dll'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Loaded 'C:\Windows\SysWOW64\profapi.dll'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Loaded 'C:\Windows\SysWOW64\setupapi.dll'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Loaded 'C:\Windows\SysWOW64\ole32.dll'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Loaded 'C:\Windows\SysWOW64\wtsapi32.dll'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Loaded 'C:\Windows\SysWOW64\version.dll'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Loaded 'C:\Windows\SysWOW64\devobj.dll'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Loaded 'C:\Windows\SysWOW64\wintrust.dll'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Loaded 'C:\Windows\SysWOW64\msasn1.dll'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Loaded 'C:\Windows\SysWOW64\crypt32.dll'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Loaded 'C:\Windows\SysWOW64\ntmarta.dll'. Cannot find or open the PDB file.
+The thread 0x1ec4 has exited with code 0 (0x0).
+The thread 0x417c has exited with code 0 (0x0).
+The thread 0x34e4 has exited with code 0 (0x0).
+The thread 0x15d8 has exited with code 0 (0x0).
+'FYP-LightFieldImages.exe' (Win32): Loaded 'C:\Windows\SysWOW64\dwmapi.dll'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Loaded 'C:\Windows\SysWOW64\winsta.dll'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Loaded 'C:\Windows\SysWOW64\MMDevAPI.dll'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Loaded 'C:\Windows\SysWOW64\propsys.dll'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Loaded 'C:\Windows\SysWOW64\wdmaud.drv'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Loaded 'C:\Windows\SysWOW64\ksuser.dll'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Loaded 'C:\Windows\SysWOW64\avrt.dll'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Loaded 'C:\Windows\SysWOW64\AudioSes.dll'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Loaded 'C:\Windows\SysWOW64\WinTypes.dll'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Loaded 'C:\Windows\SysWOW64\msacm32.drv'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Unloaded 'C:\Windows\SysWOW64\msacm32.drv'
+'FYP-LightFieldImages.exe' (Win32): Loaded 'C:\Windows\SysWOW64\msacm32.drv'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Loaded 'C:\Windows\SysWOW64\msacm32.dll'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Loaded 'C:\Windows\SysWOW64\midimap.dll'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Loaded 'C:\Windows\SysWOW64\wrap_oal.dll'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Unloaded 'C:\Windows\SysWOW64\wrap_oal.dll'
+'FYP-LightFieldImages.exe' (Win32): Loaded 'C:\Windows\SysWOW64\wrap_oal.dll'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Loaded 'C:\Windows\SysWOW64\dsound.dll'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Loaded 'C:\Windows\SysWOW64\clbcatq.dll'. Cannot find or open the PDB file.
+The thread 0x183c has exited with code 0 (0x0).
+The thread 0x3260 has exited with code 0 (0x0).
+The thread 0x2608 has exited with code 0 (0x0).
+The thread 0x2cf8 has exited with code 0 (0x0).
+The thread 0x2b14 has exited with code 0 (0x0).
+The thread 0x26bc has exited with code 0 (0x0).
+'FYP-LightFieldImages.exe' (Win32): Unloaded 'C:\Windows\SysWOW64\wrap_oal.dll'
+'FYP-LightFieldImages.exe' (Win32): Loaded 'C:\Windows\SysWOW64\wrap_oal.dll'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Unloaded 'C:\Windows\SysWOW64\wrap_oal.dll'
+'FYP-LightFieldImages.exe' (Win32): Loaded 'C:\Windows\SysWOW64\wrap_oal.dll'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Loaded 'C:\Windows\SysWOW64\Windows.UI.dll'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Unloaded 'C:\Windows\SysWOW64\Windows.UI.dll'
+'FYP-LightFieldImages.exe' (Win32): Loaded 'C:\Windows\SysWOW64\Windows.UI.dll'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Loaded 'C:\Windows\SysWOW64\TextInputFramework.dll'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Loaded 'C:\Windows\SysWOW64\CoreMessaging.dll'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Loaded 'C:\Windows\SysWOW64\CoreUIComponents.dll'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Loaded 'C:\Windows\SysWOW64\usermgrcli.dll'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Loaded 'C:\Windows\SysWOW64\dinput.dll'. Cannot find or open the PDB file.
+'FYP-LightFieldImages.exe' (Win32): Loaded 'C:\Windows\SysWOW64\hid.dll'. Cannot find or open the PDB file.
+The thread 0x178c has exited with code 0 (0x0).
+The thread 0x2668 has exited with code 0 (0x0).
+The thread 0x42c4 has exited with code 0 (0x0).
+The thread 0x426c has exited with code 0 (0x0).
+The thread 0x4194 has exited with code 0 (0x0).
+The thread 0x29a8 has exited with code 0 (0x0).
+The thread 0x1234 has exited with code 0 (0x0).
+The thread 0x19e8 has exited with code 0 (0x0).
+The thread 0x1ad0 has exited with code 0 (0x0).
+The thread 0x2fdc has exited with code 0 (0x0).
+The thread 0x41fc has exited with code 0 (0x0).
+The thread 0x41f8 has exited with code 0 (0x0).
+The thread 0x4204 has exited with code 0 (0x0).
+The thread 0x4210 has exited with code 0 (0x0).
+The thread 0x42d0 has exited with code 0 (0x0).
+The thread 0x42c0 has exited with code 0 (0x0).
+The thread 0x403c has exited with code 0 (0x0).
+The thread 0x4018 has exited with code 0 (0x0).
+The thread 0x4014 has exited with code 0 (0x0).
+The thread 0x1848 has exited with code 0 (0x0).
+The thread 0x6cc has exited with code 0 (0x0).
+The thread 0xc54 has exited with code 0 (0x0).
+The thread 0x4298 has exited with code 0 (0x0).
+The thread 0x80c has exited with code 0 (0x0).
+The thread 0x970 has exited with code 0 (0x0).
+'FYP-LightFieldImages.exe' (Win32): Unloaded 'C:\Windows\SysWOW64\wrap_oal.dll'
+'FYP-LightFieldImages.exe' (Win32): Unloaded 'C:\Windows\SysWOW64\Windows.UI.dll'
+The thread 0x3810 has exited with code 0 (0x0).
+The thread 0x11f8 has exited with code 0 (0x0).
+The thread 0x2f50 has exited with code 0 (0x0).
+The thread 0xaa4 has exited with code 0 (0x0).
+The thread 0x1100 has exited with code 0 (0x0).
+The thread 0x3534 has exited with code 0 (0x0).
+The thread 0x385c has exited with code 0 (0x0).
+The thread 0x2af0 has exited with code 0 (0x0).
+The thread 0x418c has exited with code 0 (0x0).
+The thread 0x4180 has exited with code 0 (0x0).
+The thread 0x6a0 has exited with code 0 (0x0).
+The program '[16112] FYP-LightFieldImages.exe' has exited with code 0 (0x0).

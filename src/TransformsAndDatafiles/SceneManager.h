@@ -8,10 +8,14 @@ class SceneManager
 public: 
 
 	void addScene(Scene scene);
-	void loadScene();
-	void renderScene(sf::RenderWindow &window);
+	//void loadScene();
+	//void renderScene(sf::RenderWindow &window);
+	//void updateScene(sf::RenderWindow &window);
+
+	//void nextScene();
 
 	Scene m_currentScene;
+	Scene m_nextScene;
 
-	std::vector<Scene> m_scenes;
+	std::vector<Scene> m_scenes; 
 };

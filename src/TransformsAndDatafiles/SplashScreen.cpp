@@ -2,10 +2,10 @@
 
 
 
-void SplashScreen::load(float sizeX , float sizeY)
+void SplashScreen::load()
 {
 	m_playButton.setUp(580.0f, 250.0f, 120.0f, 50.0f);
-	m_background.setUp(0, 0, sizeX, sizeY, "../../TransformsAndDatafiles/assets/SplashScreenBackground.png");
+	m_background.setUp(0, 0, 1280,720, "../../TransformsAndDatafiles/assets/SplashScreenBackground.png");
 }
 
 void SplashScreen::render(sf::RenderWindow &window)
@@ -15,7 +15,15 @@ void SplashScreen::render(sf::RenderWindow &window)
 
 }
 
-void SplashScreen::update(sf::RenderWindow &window)
+bool SplashScreen::update(sf::RenderWindow &window)
 {
-	m_playButton.mouseClicked(window);
+	if(m_playButton.mouseHovering(window));
+	{
+		if (m_playButton.mouseClicked(window))
+		{
+			return true;
+		}
+	}
+	return false;
+	
 }

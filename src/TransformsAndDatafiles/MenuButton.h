@@ -10,7 +10,8 @@ public:
 	sf::Mouse m_mouse;
 	
 	void setUp(float xPos, float yPos, float xSize, float ySize);
-	void mouseClicked(sf::RenderWindow &window);
+	bool mouseHovering(sf::RenderWindow &window);
+	bool mouseClicked(sf::RenderWindow &window);
 
 	
 

@@ -17,16 +17,29 @@ void MenuButton::setUp(float xPos, float yPos, float xSize, float ySize)
 	yMax = yPos + ySize;
 }
 
-void MenuButton::mouseClicked(sf::RenderWindow & window)
+bool MenuButton::mouseHovering(sf::RenderWindow & window)
 {
 	if (m_mouse.getPosition(window).x < xMax && m_mouse.getPosition(window).x > xPosition && m_mouse.getPosition(window).y < yMax && m_mouse.getPosition(window).y > yPosition)
 	{
 		//	std::cout << "button hit\n";
 			m_rectangle.setFillColor(sf::Color::Green);
+			return true;
 	}
 	else
 	{
 		m_rectangle.setFillColor(sf::Color::White);
+		return false;
 	}
 }
 
+bool MenuButton::mouseClicked(sf::RenderWindow& window)
+{
+	if (m_mouse.isButtonPressed(m_mouse.Left))
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
