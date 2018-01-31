@@ -1,21 +1,23 @@
 #pragma once
-#include "Scene.h"
+//#include "Scene.h"
 #include <SFML\Graphics.hpp>
 #include <vector>
+#include "SplashScreen.h"
+#include "GameScene.h"
 
 class SceneManager
 {
 public: 
 
-	void addScene(Scene scene);
-	//void loadScene();
-	//void renderScene(sf::RenderWindow &window);
-	//void updateScene(sf::RenderWindow &window);
+	void loadScenes(int levels);
+	void renderScene(sf::RenderWindow &window);
+	void updateScene(sf::RenderWindow &window);
 
-	//void nextScene();
+	void nextScene();
 
-	Scene m_currentScene;
-	Scene m_nextScene;
+	int m_currentScene;
 
-	std::vector<Scene> m_scenes; 
+
+
+	std::vector<Scene*> m_scenes; 
 };

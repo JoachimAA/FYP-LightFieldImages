@@ -1,6 +1,5 @@
 #include "SplashScreen.h"
-
-
+#include <iostream>
 
 void SplashScreen::load()
 {
@@ -17,9 +16,9 @@ void SplashScreen::render(sf::RenderWindow &window)
 
 bool SplashScreen::update(sf::RenderWindow &window)
 {
-	if(m_playButton.mouseHovering(window));
+	if(m_playButton.mouseHovering(window) == true)
 	{
-		if (m_playButton.mouseClicked(window))
+		if (m_playButton.mouseClicked(window) == true)
 		{
 			return true;
 		}

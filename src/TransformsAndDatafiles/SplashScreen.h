@@ -7,9 +7,9 @@
 class SplashScreen : public Scene
 {
 public:
-	void load();
-	void render(sf::RenderWindow &window);
-	bool update(sf::RenderWindow &window);
+	void load() override;
+	void render(sf::RenderWindow &window) override;
+	bool update(sf::RenderWindow &window) override;
 
 	MenuButton m_playButton;
 	Background m_background;

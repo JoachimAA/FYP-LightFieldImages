@@ -1,37 +1,40 @@
 #include "SceneManager.h"
-/*
-void SceneManager::loadScene()
+
+
+void SceneManager::loadScenes(int levels)
 {
-	m_currentScene.load();
+	for (int i = 0; i < levels; i++)
+	{
+		if (i == 0)
+		{
+			m_scenes.push_back(new SplashScreen());
+		}
+		else
+			m_scenes.push_back(new GameScene());
+	}
+
+	m_currentScene = 0;
+	m_scenes[m_currentScene]->load();
+	
 }
 
 void SceneManager::renderScene(sf::RenderWindow &window)
 {
-	m_currentScene.render(window);
-}*/
-
-void SceneManager::addScene(Scene scene)
-{
-	m_scenes.push_back(scene);
-	if (m_scenes.size() == 1){
-		m_currentScene = m_scenes[0];
-	}
-	if (m_scenes.size() == 2){
-		m_nextScene = m_scenes[1];
-	}
-
+	m_scenes[m_currentScene]->render(window);
 }
-/*
+
+
 void SceneManager::updateScene(sf::RenderWindow &window)
 {
-	if (m_currentScene.update(window))
+	if (m_scenes[m_currentScene]->update(window))
 	{
 		nextScene();
 	}
+
 }
 
 void SceneManager::nextScene()
 {
-	m_nextScene = m_currentScene;
-	loadScene();
-}*/
+	m_currentScene++;
+	m_scenes[m_currentScene]->load();
+}

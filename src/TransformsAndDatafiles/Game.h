@@ -25,14 +25,14 @@ using namespace std;
 	private:
 
 		bool play = true;
+		bool game = false;
 
 
 		SplashScreen m_menu;
 		GameScene level1;
 
-		Scene m_currentScene;
 
-		SceneManager m_sceneManager;
+		SceneManager* m_sceneManager;
 		SoundManager m_soundManager;
 		MenuButton * m_menuButton;
 

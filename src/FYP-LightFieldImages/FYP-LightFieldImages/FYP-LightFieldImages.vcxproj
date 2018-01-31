@@ -121,6 +121,7 @@
     <ClCompile Include="..\..\TransformsAndDatafiles\Game.cpp" />
     <ClCompile Include="..\..\TransformsAndDatafiles\GameObject.cpp" />
     <ClCompile Include="..\..\TransformsAndDatafiles\GameScene.cpp" />
+    <ClCompile Include="..\..\TransformsAndDatafiles\InvisibleButton.cpp" />
     <ClCompile Include="..\..\TransformsAndDatafiles\main.cpp" />
     <ClCompile Include="..\..\TransformsAndDatafiles\MenuButton.cpp" />
     <ClCompile Include="..\..\TransformsAndDatafiles\Rectangle.cpp" />
@@ -134,6 +135,7 @@
     <ClInclude Include="..\..\TransformsAndDatafiles\Game.h" />
     <ClInclude Include="..\..\TransformsAndDatafiles\GameObject.h" />
     <ClInclude Include="..\..\TransformsAndDatafiles\GameScene.h" />
+    <ClInclude Include="..\..\TransformsAndDatafiles\InvisibleButton.h" />
     <ClInclude Include="..\..\TransformsAndDatafiles\MenuButton.h" />
     <ClInclude Include="..\..\TransformsAndDatafiles\Rectangle.h" />
     <ClInclude Include="..\..\TransformsAndDatafiles\Scene.h" />

@@ -1,19 +1,39 @@
 #pragma once
 #include "Scene.h"
 #include "Background.h"
+#include <fstream>
+#include <sstream>
+#include "InvisibleButton.h"
 
+using namespace std;
 
 class GameScene : public Scene
 {
 public:
 
 	Background m_background;
+	InvisibleButton* m_iButton;
 
-	std::vector<Background> vecOfBackgrounds;
+	vector<Background> vecOfBackgrounds;
+	vector<InvisibleButton*> vecOfIButtons;
+	vector<std::string> vecOfSounds;
 
-	void load();
-	void render(sf::RenderWindow &window);
-	bool update(sf::RenderWindow &window);
+	int m_currentBackground;
+
+	int numOfSounds;
+	//first button in text file correlates to the first sound in text file
+	string buttonFiles = "../../TransformsAndDatafiles/level1Buttons.txt";
+	string soundFiles = "../../TransformsAndDatafiles/level1Sounds.txt";
+
+	ifstream file;
+	string s;
+	stringstream ss;
+
+	void load() override;
+	void render(sf::RenderWindow &window) override;
+	bool update(sf::RenderWindow &window) override;
+
+
 
 	sf::Mouse m_mouse;
 };

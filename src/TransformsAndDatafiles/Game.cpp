@@ -15,17 +15,13 @@ Game::Game() :
 void Game::load()
 {
 
-
-	m_menu.load();
-
+	//m_menu.load();
+	m_sceneManager = new SceneManager();
 	//adding scenes for game
-	m_sceneManager.addScene(m_menu);
-	m_sceneManager.addScene(level1);
-
 	//loading the current scene
-	//m_sceneManager->loadScene();
+	m_sceneManager->loadScenes(2);
 
-	m_soundManager.loadSound();
+//	m_soundManager.loadSound();
 
 	run();
 }
@@ -55,33 +51,17 @@ void Game::run()
 void Game::update(sf::RenderWindow &window)
 {
 
-	//plays a is for apple
-	if (play)
-	{
-		m_soundManager.playSound();
-		play = false;
-	}
-//	m_button.mouseClicked(window);
-
 	//update current scene
-	//m_sceneManager->updateScene(window);
+	m_sceneManager->updateScene(window);
 
-	
 
-	if (m_menu.update(window))
-	{
-//		level1.load();
-	}
 }
 
 void Game::render(sf::RenderWindow &window)
 {
-	//m_button.render(window);
-
 	//render the current scene
-	//m_sceneManager->renderScene(window);
+	m_sceneManager->renderScene(window);
 
-	m_menu.render(window);
 	//render window
 	window.display();
 }

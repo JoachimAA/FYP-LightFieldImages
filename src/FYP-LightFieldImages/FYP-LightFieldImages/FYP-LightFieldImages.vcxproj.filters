@@ -48,6 +48,9 @@
     <ClCompile Include="..\..\TransformsAndDatafiles\Rectangle.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\TransformsAndDatafiles\InvisibleButton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\TransformsAndDatafiles\Game.h">
@@ -78,6 +81,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\TransformsAndDatafiles\Rectangle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\TransformsAndDatafiles\InvisibleButton.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

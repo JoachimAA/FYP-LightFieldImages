@@ -12,11 +12,11 @@ class SoundManager {
 public:
 	
 	
-	void loadSound();
-	void playSound();
+	void loadSound(std::string filename);
+	void playSound(int soundNum);
 
-	std::string apple = "../TransformsAndDatafiles/assets/Apple.wav";
-   // std::vector<sf::Sound> m_gameSounds;
+	
+    std::vector<sf::SoundBuffer> m_gameSounds;
 
 	sf::Sound m_sound;
 
