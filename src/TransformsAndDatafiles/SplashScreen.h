@@ -3,6 +3,7 @@
 #include "MenuButton.h"
 #include "Background.h"
 #include "SceneManager.h"
+#include "Text.h"
 
 class SplashScreen : public Scene
 {
@@ -13,6 +14,8 @@ public:
 
 	MenuButton m_playButton;
 	Background m_background;
+	Text * m_play;
+
 
 private:
 

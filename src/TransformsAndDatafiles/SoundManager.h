@@ -17,9 +17,7 @@ public:
 
 	
     std::vector<sf::SoundBuffer> m_gameSounds;
-
 	sf::Sound m_sound;
-
 	sf::SoundBuffer m_gameSound;
 
 private:

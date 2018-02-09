@@ -28,13 +28,7 @@ using namespace std;
 		bool game = false;
 
 
-		SplashScreen m_menu;
-		GameScene level1;
-
-
 		SceneManager* m_sceneManager;
-		SoundManager m_soundManager;
-		MenuButton * m_menuButton;
 
 		sf::RenderWindow window;
 

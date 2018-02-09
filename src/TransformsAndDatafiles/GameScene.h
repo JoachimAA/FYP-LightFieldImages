@@ -11,7 +11,6 @@ class GameScene : public Scene
 {
 public:
 
-	Background m_background;
 	InvisibleButton* m_iButton;
 
 	vector<Background> vecOfBackgrounds;

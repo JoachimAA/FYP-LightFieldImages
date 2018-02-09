@@ -129,6 +129,7 @@
     <ClCompile Include="..\..\TransformsAndDatafiles\SceneManager.cpp" />
     <ClCompile Include="..\..\TransformsAndDatafiles\SoundManager.cpp" />
     <ClCompile Include="..\..\TransformsAndDatafiles\SplashScreen.cpp" />
+    <ClCompile Include="..\..\TransformsAndDatafiles\Text.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\TransformsAndDatafiles\Background.h" />
@@ -142,6 +143,7 @@
     <ClInclude Include="..\..\TransformsAndDatafiles\SceneManager.h" />
     <ClInclude Include="..\..\TransformsAndDatafiles\SoundManager.h" />
     <ClInclude Include="..\..\TransformsAndDatafiles\SplashScreen.h" />
+    <ClInclude Include="..\..\TransformsAndDatafiles\Text.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
