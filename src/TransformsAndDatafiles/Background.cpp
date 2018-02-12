@@ -1,6 +1,6 @@
 #include "Background.h"
 
-void Background::setUp(float xPos, float yPos, float xSize, float ySize, std::string texture)
+Background::Background(float xPos, float yPos, float xSize, float ySize, std::string texture)
 {
 	m_rectangle.setPosition(sf::Vector2f(xPos, yPos));
 	m_rectangle.setSize(sf::Vector2f(xSize, ySize));

@@ -1,13 +1,7 @@
-#include "MenuButton.h"
+#include "Button.h"
 #include <iostream>
 
-
-MenuButton::MenuButton()
-{
-
-}
-
-void MenuButton::setUp(float xPos, float yPos, float xSize, float ySize)
+Button::Button(float xPos, float yPos, float xSize, float ySize,std::string font, std::string buttonMessage, float textSize , sf::Color textColour)
 {
 	m_rectangle.setPosition(sf::Vector2f(xPos, yPos));
 	m_rectangle.setSize(sf::Vector2f(xSize, ySize));
@@ -15,9 +9,11 @@ void MenuButton::setUp(float xPos, float yPos, float xSize, float ySize)
 	yPosition = yPos;
 	xMax = xPos + xSize;
 	yMax = yPos + ySize;
+	m_buttonText = new Text(font, buttonMessage, textSize, textColour, xPos + 15,yPos + ySize / 10);
+	
 }
 
-bool MenuButton::mouseHovering(sf::RenderWindow & window)
+bool Button::mouseHovering(sf::RenderWindow & window)
 {
 	if (m_mouse.getPosition(window).x < xMax && m_mouse.getPosition(window).x > xPosition && m_mouse.getPosition(window).y < yMax && m_mouse.getPosition(window).y > yPosition)
 	{
@@ -32,7 +28,7 @@ bool MenuButton::mouseHovering(sf::RenderWindow & window)
 	}
 }
 
-bool MenuButton::mouseClicked(sf::RenderWindow& window)
+bool Button::mouseClicked(sf::RenderWindow& window)
 {
 	if (m_mouse.isButtonPressed(m_mouse.Left))
 	{

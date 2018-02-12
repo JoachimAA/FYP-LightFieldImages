@@ -5,7 +5,7 @@ class Background : public Rectangle
 {
 public:
 
-	void setUp(float xPos, float yPos, float xSize, float ySize, std::string texture);
+	Background(float xPos, float yPos, float xSize, float ySize, std::string texture);
 
 
 };

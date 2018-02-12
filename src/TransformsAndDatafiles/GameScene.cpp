@@ -3,13 +3,6 @@
 
 void GameScene::load()
 {
-	vecOfBackgrounds.resize(2);
-
-	vecOfBackgrounds[0].setUp(0, 0, 1280, 720, "../../TransformsAndDatafiles/assets/AnkylosaurusFocus.jpg");
-	vecOfBackgrounds[1].setUp(0, 0, 1280, 720, "../../TransformsAndDatafiles/assets/DiplodocusFocus.jpg");
-	
-	m_currentBackground = 0;
-
 	//reading sound files
 	file.open(soundFiles);
 	if (file.is_open())
@@ -29,6 +22,22 @@ void GameScene::load()
 		std::cout << "cannot open sound file\n";
 	}
 	file.close();
+
+	//reading background files
+	file.open(backgroundFiles);
+	if (file.is_open())
+	{
+		for (int i = 0; i < numOfSounds; i++)
+		{
+			getline(file, s);
+			m_background = new Background(0, 0, 1280, 720, s);
+			vecOfBackgrounds.push_back(m_background);
+		}
+		m_currentBackground = 0; //setting the background number
+	}
+	file.close();
+
+
 
 	//reading button files
 	file.open(buttonFiles);
@@ -61,6 +70,8 @@ void GameScene::load()
 		std::cout << "cannot open button file\n";
 	}
 
+	m_menuButton = new Button(20,650,225,50, "../../TransformsAndDatafiles/assets/Tellural.ttf", "Back to Menus", 30 , sf::Color::Black) ;
+
 	for (int i = 0; i < numOfSounds; i++)
 	{
 		sceneSoundManager.loadSound(vecOfSounds[i]);
@@ -72,8 +83,9 @@ void GameScene::render(sf::RenderWindow & window)
 {
 
 
-	vecOfBackgrounds[m_currentBackground].render(window);
-
+	vecOfBackgrounds[m_currentBackground]->render(window);
+	m_menuButton->render(window);
+	m_menuButton->m_buttonText->render(window);
 
 	//if i need to render the buttons
 	/*for (int i = 0; i < numOfSounds; i++)
@@ -91,6 +103,14 @@ bool GameScene::update(sf::RenderWindow & window)
 		{
 			m_currentBackground = i;
 			sceneSoundManager.playSound(i);
+		}
+	}
+
+	if (m_menuButton->mouseHovering(window) == true)
+	{
+		if (m_menuButton->mouseClicked(window) == true)
+		{
+			return true;
 		}
 	}
 	return false;

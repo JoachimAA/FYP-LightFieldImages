@@ -123,7 +123,7 @@
     <ClCompile Include="..\..\TransformsAndDatafiles\GameScene.cpp" />
     <ClCompile Include="..\..\TransformsAndDatafiles\InvisibleButton.cpp" />
     <ClCompile Include="..\..\TransformsAndDatafiles\main.cpp" />
-    <ClCompile Include="..\..\TransformsAndDatafiles\MenuButton.cpp" />
+    <ClCompile Include="..\..\TransformsAndDatafiles\Button.cpp" />
     <ClCompile Include="..\..\TransformsAndDatafiles\Rectangle.cpp" />
     <ClCompile Include="..\..\TransformsAndDatafiles\Scene.cpp" />
     <ClCompile Include="..\..\TransformsAndDatafiles\SceneManager.cpp" />
@@ -137,7 +137,7 @@
     <ClInclude Include="..\..\TransformsAndDatafiles\GameObject.h" />
     <ClInclude Include="..\..\TransformsAndDatafiles\GameScene.h" />
     <ClInclude Include="..\..\TransformsAndDatafiles\InvisibleButton.h" />
-    <ClInclude Include="..\..\TransformsAndDatafiles\MenuButton.h" />
+    <ClInclude Include="..\..\TransformsAndDatafiles\Button.h" />
     <ClInclude Include="..\..\TransformsAndDatafiles\Rectangle.h" />
     <ClInclude Include="..\..\TransformsAndDatafiles\Scene.h" />
     <ClInclude Include="..\..\TransformsAndDatafiles\SceneManager.h" />

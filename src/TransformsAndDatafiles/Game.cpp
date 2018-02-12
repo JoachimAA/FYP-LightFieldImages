@@ -14,10 +14,7 @@ Game::Game() :
 
 void Game::load()
 {
-
-	//m_menu.load();
 	m_sceneManager = new SceneManager();
-	//adding scenes for game
 	//loading the current scene
 	m_sceneManager->loadScenes(2);
 

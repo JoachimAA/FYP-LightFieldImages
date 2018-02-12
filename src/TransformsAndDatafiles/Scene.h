@@ -2,6 +2,8 @@
 #include <SFML\Graphics.hpp>
 #include <SFML\Audio.hpp>
 #include "SoundManager.h"
+#include "Background.h"
+#include "Button.h"
 
 class Scene
 {

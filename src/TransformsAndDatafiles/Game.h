@@ -6,10 +6,7 @@
 #include <SFML\Graphics.hpp>
 #include <SFML\Audio.hpp>
 #include "SoundManager.h"
-#include "MenuButton.h"
 #include "SceneManager.h"
-#include "SplashScreen.h"
-#include "GameScene.h"
 
 
 using namespace std;
@@ -26,7 +23,6 @@ using namespace std;
 
 		bool play = true;
 		bool game = false;
-
 
 		SceneManager* m_sceneManager;
 

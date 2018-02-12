@@ -1,7 +1,5 @@
 #pragma once
 #include "Scene.h"
-#include "MenuButton.h"
-#include "Background.h"
 #include "SceneManager.h"
 #include "Text.h"
 
@@ -12,8 +10,8 @@ public:
 	void render(sf::RenderWindow &window) override;
 	bool update(sf::RenderWindow &window) override;
 
-	MenuButton m_playButton;
-	Background m_background;
+	Button* m_playButton;
+	Background* m_background;
 	Text * m_play;
 
 
