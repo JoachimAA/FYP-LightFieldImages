@@ -3,27 +3,43 @@
 
 void SplashScreen::load()
 {
-	m_playButton = new Button(590.0f, 250.0f, 100.0f, 50.0f, "../../TransformsAndDatafiles/assets/Tellural.ttf" , "Play", 30.0f , sf::Color::Black);
+	m_spellingButton = new Button(570.0f, 250.0f, 140.0f, 50.0f, "../../TransformsAndDatafiles/assets/Tellural.ttf" , "Spelling", 30.0f , sf::Color::Black);
+	m_alphabetButton = new Button(560.0f, 350.0f, 160.0f, 50.0f, "../../TransformsAndDatafiles/assets/Tellural.ttf", "Alphabet", 30.0f, sf::Color::Black);
 	m_background = new Background(0, 0, 1280,720, "../../TransformsAndDatafiles/assets/SplashScreenBackground.png");
 }
 
 void SplashScreen::render(sf::RenderWindow &window)
 {
+	//render background
 	m_background->render(window);
-	m_playButton->render(window);
-	m_playButton->m_buttonText->render(window);
+
+	//render buttons and text that goes with each button
+	m_spellingButton->render(window);
+	m_spellingButton->m_buttonText->render(window);
+	m_alphabetButton->render(window);
+	m_alphabetButton->m_buttonText->render(window);
 
 }
 
-bool SplashScreen::update(sf::RenderWindow &window)
+int SplashScreen::update(sf::RenderWindow &window)
 {
-	if(m_playButton->mouseHovering(window) == true)
+
+	//checks button for mouse hoveing over and then clicking
+	if(m_spellingButton->mouseHovering(window) == true)
 	{
-		if (m_playButton->mouseClicked(window) == true)
+		if (m_spellingButton->mouseClicked(window) == true)
 		{
-			return true;
+			return 1;
 		}
 	}
-	return false;
+
+	if (m_alphabetButton->mouseHovering(window) == true)
+	{
+		if (m_alphabetButton->mouseClicked(window) == true)
+		{
+			return 2;
+		}
+	}
+
 	
 }

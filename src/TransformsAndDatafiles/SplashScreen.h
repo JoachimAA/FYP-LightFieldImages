@@ -8,9 +8,10 @@ class SplashScreen : public Scene
 public:
 	void load() override;
 	void render(sf::RenderWindow &window) override;
-	bool update(sf::RenderWindow &window) override;
+	int update(sf::RenderWindow &window) override;
 
-	Button* m_playButton;
+	Button* m_spellingButton;
+	Button* m_alphabetButton;
 	Background* m_background;
 	Text * m_play;
 

@@ -36,7 +36,7 @@ public:
 
 	void load() override;
 	void render(sf::RenderWindow &window) override;
-	bool update(sf::RenderWindow &window) override;
+	int update(sf::RenderWindow &window) override;
 
 
 

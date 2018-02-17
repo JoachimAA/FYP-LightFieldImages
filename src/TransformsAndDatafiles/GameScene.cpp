@@ -19,7 +19,7 @@ void GameScene::load()
 		}
 	}
 	else{
-		std::cout << "cannot open sound file\n";
+		std::cout << "cannot open sound file" <<  endl;
 	}
 	file.close();
 
@@ -94,7 +94,7 @@ void GameScene::render(sf::RenderWindow & window)
 	}*/
 }
 
-bool GameScene::update(sf::RenderWindow & window)
+int GameScene::update(sf::RenderWindow & window)
 {
 	for(int i = 0; i < numOfSounds; i++)
 	if (vecOfIButtons[i]->mouseHovering(window) == true)
@@ -110,8 +110,8 @@ bool GameScene::update(sf::RenderWindow & window)
 	{
 		if (m_menuButton->mouseClicked(window) == true)
 		{
-			return true;
+			return 0;
 		}
 	}
-	return false;
+	return 99;
 }

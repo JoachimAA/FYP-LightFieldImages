@@ -13,7 +13,9 @@ public:
 	void renderScene(sf::RenderWindow &window);
 	void updateScene(sf::RenderWindow &window);
 
-	void nextScene();
+
+	void nextScene(int sceneValue);
+	void backToMenu();
 
 	int m_currentScene;
 
