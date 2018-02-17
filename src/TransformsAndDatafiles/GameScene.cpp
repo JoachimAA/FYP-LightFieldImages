@@ -4,7 +4,7 @@
 void GameScene::load(int level)
 {
 	//reading sound files
-	file.open(soundFiles);
+	file.open("../../TransformsAndDatafiles/Assets/level" + std::to_string(level) + "Sounds.txt");
 	if (file.is_open())
 	{
 		std::getline(file, s);
@@ -24,7 +24,7 @@ void GameScene::load(int level)
 	file.close();
 
 	//reading background files
-	file.open(backgroundFiles);
+	file.open("../../TransformsAndDatafiles/Assets/level" + std::to_string(level) + "Backgrounds.txt");
 	if (file.is_open())
 	{
 		for (int i = 0; i < numOfSounds; i++)
@@ -40,7 +40,7 @@ void GameScene::load(int level)
 
 
 	//reading button files
-	file.open(buttonFiles);
+	file.open("../../TransformsAndDatafiles/Assets/level" + std::to_string(level) +"Buttons.txt");
 	if (file.is_open())
 	{
 	  for (int i = 0; i < numOfSounds; i++)
