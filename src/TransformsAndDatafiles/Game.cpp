@@ -16,7 +16,7 @@ void Game::load()
 {
 	m_sceneManager = new SceneManager();
 	//loading the current scene
-	m_sceneManager->loadScenes(3);
+	m_sceneManager->loadScene();
 
 //	m_soundManager.loadSound();
 

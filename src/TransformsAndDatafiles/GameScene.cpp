@@ -1,7 +1,7 @@
 #include "GameScene.h"
 
 
-void GameScene::load()
+void GameScene::load(int level)
 {
 	//reading sound files
 	file.open(soundFiles);
@@ -110,8 +110,8 @@ int GameScene::update(sf::RenderWindow & window)
 	{
 		if (m_menuButton->mouseClicked(window) == true)
 		{
-			return 0;
+			return 3;
 		}
 	}
-	return 99;
+	return 0;
 }

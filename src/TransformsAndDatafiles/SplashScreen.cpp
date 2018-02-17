@@ -1,7 +1,7 @@
 #include "SplashScreen.h"
 #include <iostream>
 
-void SplashScreen::load()
+void SplashScreen::load(int level)
 {
 	m_spellingButton = new Button(570.0f, 250.0f, 140.0f, 50.0f, "../../TransformsAndDatafiles/assets/Tellural.ttf" , "Spelling", 30.0f , sf::Color::Black);
 	m_alphabetButton = new Button(560.0f, 350.0f, 160.0f, 50.0f, "../../TransformsAndDatafiles/assets/Tellural.ttf", "Alphabet", 30.0f, sf::Color::Black);
@@ -40,6 +40,6 @@ int SplashScreen::update(sf::RenderWindow &window)
 			return 2;
 		}
 	}
-
+	return 0;
 	
 }

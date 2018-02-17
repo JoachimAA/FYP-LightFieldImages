@@ -34,7 +34,7 @@ public:
 	string s;
 	stringstream ss;
 
-	void load() override;
+	void load(int level) override;
 	void render(sf::RenderWindow &window) override;
 	int update(sf::RenderWindow &window) override;
 

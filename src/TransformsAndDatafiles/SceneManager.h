@@ -9,12 +9,12 @@ class SceneManager
 {
 public: 
 
-	void loadScenes(int levels);
+	void loadScene();
 	void renderScene(sf::RenderWindow &window);
 	void updateScene(sf::RenderWindow &window);
 
 
-	void nextScene(int sceneValue);
+	void nextScene(int level);
 	void backToMenu();
 
 	int m_currentScene;
