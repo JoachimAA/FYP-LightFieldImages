@@ -40,8 +40,6 @@ void SceneManager::nextScene(int level)
 
 void SceneManager::backToMenu()
 {
-
 	m_currentScene = 0;
 	m_scenes.erase(m_scenes.end() -1);
-//	m_scenes[m_currentScene]->load();
 }

@@ -70,7 +70,8 @@ void GameScene::load(int level)
 		std::cout << "cannot open button file\n";
 	}
 
-	m_menuButton = new Button(20,650,225,50, "../../TransformsAndDatafiles/assets/Tellural.ttf", "Back to Menus", 30 , sf::Color::Black) ;
+	//back to menu button
+	m_menuButton = new Button(20,10,225,50, "../../TransformsAndDatafiles/assets/Tellural.ttf", "Back to Menus", 30 , sf::Color::Black) ;
 
 	for (int i = 0; i < numOfSounds; i++)
 	{
@@ -88,10 +89,14 @@ void GameScene::render(sf::RenderWindow & window)
 	m_menuButton->m_buttonText->render(window);
 
 	//if i need to render the buttons
-	/*for (int i = 0; i < numOfSounds; i++)
+
+	for (int i = 0; i < numOfSounds; i++)
 	{
-		vecOfIButtons[i]->render(window);
-	}*/
+		if (i != m_currentBackground)
+		{
+			vecOfIButtons[i]->render(window);
+		}
+	}
 }
 
 int GameScene::update(sf::RenderWindow & window)

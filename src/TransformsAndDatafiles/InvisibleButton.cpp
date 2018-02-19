@@ -8,6 +8,9 @@ InvisibleButton::InvisibleButton(float xPos, float yPos, float xSize, float ySiz
 	yPosition = yPos;
 	xMax = xPos + xSize;
 	yMax = yPos + ySize;
+	m_rectangle.setFillColor(sf::Color::Transparent);
+	m_rectangle.setOutlineThickness(1.0f);
+	m_rectangle.setOutlineColor(sf::Color::Black);
 }
 
 bool InvisibleButton::mouseHovering(sf::RenderWindow & window)
