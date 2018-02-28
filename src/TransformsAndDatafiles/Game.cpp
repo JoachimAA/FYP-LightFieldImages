@@ -33,9 +33,14 @@ void Game::run()
 		while (window.pollEvent(ev))
 		{
 			if (ev.type == sf::Event::Closed) window.close();
+			if (ev.type == sf::Event::TextEntered)
+			{
+					m_sceneManager->handleInput(ev);
+			}
 		}
 
-		update(window);
+		
+		update(window ,gameClock);
 		render(window);
 
 	}
@@ -45,11 +50,11 @@ void Game::run()
 }
 
 
-void Game::update(sf::RenderWindow &window)
+void Game::update(sf::RenderWindow &window, sf::Clock &gameClock)
 {
 
 	//update current scene
-	m_sceneManager->updateScene(window);
+	m_sceneManager->updateScene(window, gameClock);
 
 
 }

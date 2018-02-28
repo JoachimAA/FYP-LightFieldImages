@@ -4,6 +4,7 @@
 #include <fstream>
 #include <sstream>
 #include "InvisibleButton.h"
+#include "Text.h"
 
 
 using namespace std;
@@ -25,20 +26,10 @@ public:
 	int m_currentBackground;
 
 	int numOfSounds;
-	//first button in text file correlates to the first sound in text file
-	string buttonFiles = "../../TransformsAndDatafiles/Assets/level1Buttons.txt";
-	string soundFiles = "../../TransformsAndDatafiles/Assets/level1Sounds.txt";
-	string backgroundFiles = "../../TransformsAndDatafiles/Assets/level1Backgrounds.txt";
 
 	ifstream file;
 	string s;
 	stringstream ss;
-
-	void load(int level) override;
-	void render(sf::RenderWindow &window) override;
-	int update(sf::RenderWindow &window) override;
-
-
 
 	sf::Mouse m_mouse;
 };

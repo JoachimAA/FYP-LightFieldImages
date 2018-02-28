@@ -33,9 +33,6 @@
     <ClCompile Include="..\..\TransformsAndDatafiles\SceneManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\TransformsAndDatafiles\GameScene.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\TransformsAndDatafiles\Background.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -52,6 +49,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\TransformsAndDatafiles\Button.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\TransformsAndDatafiles\AlphabetScene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\TransformsAndDatafiles\SpellingScene.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -90,6 +93,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\TransformsAndDatafiles\Button.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\TransformsAndDatafiles\AlphabetScene.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\TransformsAndDatafiles\SpellingScene.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

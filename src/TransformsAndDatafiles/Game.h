@@ -17,7 +17,7 @@ using namespace std;
 		Game();
 		void load();
 		void run();
-		void update(sf::RenderWindow &window);
+		void update(sf::RenderWindow &window, sf::Clock &gameClock);
 		void render(sf::RenderWindow &window);
 	private:
 
@@ -25,6 +25,7 @@ using namespace std;
 		bool game = false;
 
 		SceneManager* m_sceneManager;
+		sf::Clock gameClock;
 
 		sf::RenderWindow window;
 

@@ -1,9 +1,10 @@
 #pragma once
-//#include "Scene.h"
+#include "Scene.h"
 #include <SFML\Graphics.hpp>
 #include <vector>
 #include "SplashScreen.h"
-#include "GameScene.h"
+#include "SpellingScene.h"
+#include "AlphabetScene.h"
 
 class SceneManager
 {
@@ -11,7 +12,8 @@ public:
 
 	void loadScene();
 	void renderScene(sf::RenderWindow &window);
-	void updateScene(sf::RenderWindow &window);
+	void updateScene(sf::RenderWindow &window, sf::Clock &gameClock);
+	void handleInput(sf::Event &ev);
 
 
 	void nextScene(int level);

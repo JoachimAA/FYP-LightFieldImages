@@ -1,7 +1,7 @@
 #include "Text.h"
 
 
-Text::Text(std::string font ,std::string message, float textSize, sf::Color colour, float xPos, float yPos)
+Text::Text(std::string font ,std::string message, int textSize, sf::Color colour, float xPos, float yPos)
 {
 	m_font.loadFromFile(font);
 	m_text.setString(message);
@@ -15,4 +15,9 @@ void Text::render(sf::RenderWindow & window)
 {
 	window.draw(m_text);
 
+}
+
+void Text::setMessage(std::string message)
+{
+	m_text.setString(message);
 }

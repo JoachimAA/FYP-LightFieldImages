@@ -21,7 +21,7 @@ void SplashScreen::render(sf::RenderWindow &window)
 
 }
 
-int SplashScreen::update(sf::RenderWindow &window)
+int SplashScreen::update(sf::RenderWindow &window, sf::Clock &gameClock)
 {
 
 	//checks button for mouse hoveing over and then clicking
@@ -43,3 +43,8 @@ int SplashScreen::update(sf::RenderWindow &window)
 	return 0;
 	
 }
+
+void SplashScreen::handleInput(sf::Event & ev)
+{
+}
+

@@ -117,10 +117,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\TransformsAndDatafiles\AlphabetScene.cpp" />
     <ClCompile Include="..\..\TransformsAndDatafiles\Background.cpp" />
     <ClCompile Include="..\..\TransformsAndDatafiles\Game.cpp" />
     <ClCompile Include="..\..\TransformsAndDatafiles\GameObject.cpp" />
-    <ClCompile Include="..\..\TransformsAndDatafiles\GameScene.cpp" />
     <ClCompile Include="..\..\TransformsAndDatafiles\InvisibleButton.cpp" />
     <ClCompile Include="..\..\TransformsAndDatafiles\main.cpp" />
     <ClCompile Include="..\..\TransformsAndDatafiles\Button.cpp" />
@@ -128,10 +128,12 @@
     <ClCompile Include="..\..\TransformsAndDatafiles\Scene.cpp" />
     <ClCompile Include="..\..\TransformsAndDatafiles\SceneManager.cpp" />
     <ClCompile Include="..\..\TransformsAndDatafiles\SoundManager.cpp" />
+    <ClCompile Include="..\..\TransformsAndDatafiles\SpellingScene.cpp" />
     <ClCompile Include="..\..\TransformsAndDatafiles\SplashScreen.cpp" />
     <ClCompile Include="..\..\TransformsAndDatafiles\Text.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\TransformsAndDatafiles\AlphabetScene.h" />
     <ClInclude Include="..\..\TransformsAndDatafiles\Background.h" />
     <ClInclude Include="..\..\TransformsAndDatafiles\Game.h" />
     <ClInclude Include="..\..\TransformsAndDatafiles\GameObject.h" />
@@ -142,6 +144,7 @@
     <ClInclude Include="..\..\TransformsAndDatafiles\Scene.h" />
     <ClInclude Include="..\..\TransformsAndDatafiles\SceneManager.h" />
     <ClInclude Include="..\..\TransformsAndDatafiles\SoundManager.h" />
+    <ClInclude Include="..\..\TransformsAndDatafiles\SpellingScene.h" />
     <ClInclude Include="..\..\TransformsAndDatafiles\SplashScreen.h" />
     <ClInclude Include="..\..\TransformsAndDatafiles\Text.h" />
   </ItemGroup>
