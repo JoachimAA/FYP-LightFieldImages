@@ -21,7 +21,7 @@ public:
 
 	int m_currentScene;
 
-
+	int updateReturn;
 
 	std::vector<Scene*> m_scenes; 
 };

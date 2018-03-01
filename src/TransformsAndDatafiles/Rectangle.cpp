@@ -23,3 +23,8 @@ void Rectangle::loadTexture(std::string texture)
 		std::cout << " cant load texture\n ";
 	}
 }
+
+void Rectangle::setFillColour(sf::Color colour)
+{
+	m_rectangle.setFillColor(colour);
+}

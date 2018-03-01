@@ -16,14 +16,15 @@ void SceneManager::renderScene(sf::RenderWindow &window)
 
 
 void SceneManager::updateScene(sf::RenderWindow &window, sf::Clock &gameClock)
-{// 0 back to menu 1 scene index 2 scene index
-	if (m_scenes[m_currentScene]->update(window,gameClock) == 3){
+{// 3 back to menu 1 scene index 2 scene index
+	//updating the current scene 
+
+	updateReturn = m_scenes[m_currentScene]->update(window, gameClock);
+	if (updateReturn == 3){
 		backToMenu();
-	} else 
-	if (m_scenes[m_currentScene]->update(window, gameClock) == 1){
+	} else if (updateReturn == 1){
 		nextScene(1);
-    }
-	if (m_scenes[m_currentScene]->update(window, gameClock) == 2){
+    } else if (updateReturn == 2){
 		nextScene(2);
 	}
 }

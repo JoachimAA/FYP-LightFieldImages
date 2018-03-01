@@ -9,7 +9,7 @@ Button::Button(float xPos, float yPos, float xSize, float ySize,std::string font
 	yPosition = yPos;
 	xMax = xPos + xSize;
 	yMax = yPos + ySize;
-	m_buttonText = new Text(font, buttonMessage, textSize, textColour, xPos + 15,yPos + ySize / 10);
+	m_buttonText = new Text(font, buttonMessage, textSize, textColour, xPos + 15.0f,yPos + ySize / 10.0f);
 	
 }
 

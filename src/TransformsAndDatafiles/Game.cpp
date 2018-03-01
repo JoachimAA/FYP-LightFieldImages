@@ -42,7 +42,6 @@ void Game::run()
 		
 		update(window ,gameClock);
 		render(window);
-
 	}
 
 

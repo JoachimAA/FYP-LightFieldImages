@@ -10,12 +10,23 @@ public:
 	void render(sf::RenderWindow &window) override;
 	int update(sf::RenderWindow &window, sf::Clock &gameClock) override;
 
+	string typeIn;
+	
 	Button * m_checkButton;
 
 	vector<string> vecOfAnswers;
 
+	bool gotCorrect = false;
+	bool gotIncorrect = false;
+
+	sf::Color transparentGreen = sf::Color(0, 255, 0, 40);
+
 	Text * answer;
-	string typeIn;
+	Text * correct;
+	Text * incorrect;
+	
+	
+
 
 private:
 

@@ -17,6 +17,8 @@ public:
 	float getXMax();
 	float getYMax();
 
+	void setFillColour(sf::Color colour);
+
 	void render(sf::RenderWindow &window);
 	void loadTexture(std::string texture);
 };
