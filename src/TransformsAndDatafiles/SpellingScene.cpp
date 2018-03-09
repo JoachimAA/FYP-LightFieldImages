@@ -4,7 +4,7 @@
 void SpellingScene::load(int level)
 {
 //reading sound files
-file.open("../../TransformsAndDatafiles/Assets/level" + std::to_string(level) + "Sounds.txt");
+file.open("../../TransformsAndDatafiles/Assets/spellingLevel" + std::to_string(level) + "Sounds.txt");
 if (file.is_open()) {
 	std::getline(file, s);
 	ss.str(s);
@@ -21,7 +21,7 @@ else {
 file.close();
 
 //reading background files
-file.open("../../TransformsAndDatafiles/Assets/level" + std::to_string(level) + "Backgrounds.txt");
+file.open("../../TransformsAndDatafiles/Assets/spellingLevel" + std::to_string(level) + "Backgrounds.txt");
 if (file.is_open()) {
 	for (int i = 0; i < numOfSounds; i++) {
 		getline(file, s);
@@ -35,7 +35,7 @@ file.close();
 
 
 //reading button files
-file.open("../../TransformsAndDatafiles/Assets/level" + std::to_string(level) + "Buttons.txt");
+file.open("../../TransformsAndDatafiles/Assets/spellingLevel" + std::to_string(level) + "Buttons.txt");
 if (file.is_open()) {
 	for (int i = 0; i < numOfSounds; i++) {
 		float xPos, yPos, xSize, ySize;
@@ -70,7 +70,7 @@ for (int i = 0; i < numOfSounds; i++) {
 
 }
 //ANSWERS
-file.open("../../TransformsAndDatafiles/Assets/level" + std::to_string(level) + "Answers.txt");
+file.open("../../TransformsAndDatafiles/Assets/spellingLevel" + std::to_string(level) + "Answers.txt");
 if (file.is_open()) {
 	for (int i = 0; i < numOfSounds * 2; i++) {
 		getline(file, s);
@@ -81,11 +81,15 @@ if (file.is_open()) {
 file.close();
 
 //back to menu button
-m_menuButton = new Button(20.0f, 10.0f, 225.0f, 50.0f, "../../TransformsAndDatafiles/assets/Tellural.ttf", "Back to Menus", 30, sf::Color::Black, "../../TransformsAndDatafiles/assets/white.png");
+m_menuButton = new Button(20.0f, 10.0f, 225.0f, 50.0f, "../../TransformsAndDatafiles/assets/Tellural.ttf", "Back to Menus", 30, sf::Color::Black);
 //check answer button
-m_checkButton = new Button(20.0f, 70.0f, 225.0f, 50.0f, "../../TransformsAndDatafiles/assets/Tellural.ttf", "Check answer", 30, sf::Color::Black, "../../TransformsAndDatafiles/assets/white.png");
+m_checkButton = new Button(20.0f, 70.0f, 225.0f, 50.0f, "../../TransformsAndDatafiles/assets/Tellural.ttf", "Check answer", 30, sf::Color::Black);
 // arrow button for next level
 m_nextLevel = new TexturedButton(1180.0f, 340.0f, 0.13f, 0.13f,"../../TransformsAndDatafiles/assets/arrow.png" );
+if (level > 1) {
+	m_previousLevel = new TexturedButton(40.0f, 340.0f, 0.13f, 0.13f, "../../TransformsAndDatafiles/assets/arrow.png");
+	firstLevel = false;
+}
 //answer typing spot
 answer = new Text("../../TransformsAndDatafiles/assets/Tellural.ttf", "", 50, sf::Color::Black, 500.0f, 10.0f);
 correct = new Text("../../TransformsAndDatafiles/assets/Tellural.ttf", "Correct!", 150, sf::Color::Green, 370.0f, 200.0f);
@@ -102,6 +106,9 @@ void SpellingScene::render(sf::RenderWindow & window)
 	m_checkButton->render(window);
 	m_checkButton->m_buttonText->render(window);
 	m_nextLevel->renderSprite(window);
+	if (firstLevel = false) {
+		m_previousLevel->renderSprite(window);
+	}
 	answer->render(window);
 	if (gotCorrect == true) {
 		correct->render(window);
@@ -123,6 +130,8 @@ void SpellingScene::render(sf::RenderWindow & window)
 
 int SpellingScene::update(sf::RenderWindow & window, sf::Clock &gameClock)
 {
+	sf::Time elapsedTime = gameClock.getElapsedTime();  //get elapsed time
+
 	for (int i = 0; i < numOfSounds; i++)
 		if (vecOfIButtons[i]->mouseHovering(window) == true)
 		{
@@ -138,7 +147,7 @@ int SpellingScene::update(sf::RenderWindow & window, sf::Clock &gameClock)
 	{
 		if (m_nextLevel->mouseClicked(window) == true)
 		{
-			
+			return 4;
 		}
 	}
 
@@ -150,7 +159,7 @@ int SpellingScene::update(sf::RenderWindow & window, sf::Clock &gameClock)
 			return 3;
 		}
 	}
-	sf::Time elapsedTime = gameClock.getElapsedTime();  //get elapsed time
+
 	if (elapsedTime.asSeconds() > 1) {
 		gotCorrect = false;
 		gotIncorrect = false;

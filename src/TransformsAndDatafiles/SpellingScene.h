@@ -15,11 +15,13 @@ public:
 	
 	Button * m_checkButton;
 	TexturedButton * m_nextLevel;
+	TexturedButton * m_previousLevel;
 
 	vector<string> vecOfAnswers;
 
 	bool gotCorrect = false;
 	bool gotIncorrect = false;
+	bool firstLevel = true;
 
 	sf::Color transparentGreen = sf::Color(0, 255, 0, 40);
 

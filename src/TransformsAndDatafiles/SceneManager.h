@@ -20,7 +20,8 @@ public:
 	void backToMenu();
 
 	int m_currentScene;
-
+	int spellingLevels = 2;
+	int AlphabetLevels = 1;
 	int updateReturn;
 
 	std::vector<Scene*> m_scenes; 

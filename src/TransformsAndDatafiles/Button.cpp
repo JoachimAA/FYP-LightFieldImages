@@ -1,13 +1,8 @@
 #include "Button.h"
 #include <iostream>
 
-Button::Button(float xPos, float yPos, float xSize, float ySize,std::string font, std::string buttonMessage, float textSize , sf::Color textColour, std::string texture)
+Button::Button(float xPos, float yPos, float xSize, float ySize,std::string font, std::string buttonMessage, float textSize , sf::Color textColour)
 {
-	if (!m_buttonTexture.loadFromFile(texture))
-	{
-		std::cout << "cant load texture" << std::endl;
-	}
-
 	m_rectangle.setPosition(sf::Vector2f(xPos, yPos));
 	m_rectangle.setSize(sf::Vector2f(xSize, ySize));
 	xPosition = xPos;

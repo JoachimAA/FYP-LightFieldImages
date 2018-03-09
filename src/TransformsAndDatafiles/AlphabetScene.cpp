@@ -3,7 +3,7 @@
 void AlphabetScene::load(int level)
 {
 	//reading sound files
-	file.open("../../TransformsAndDatafiles/Assets/level" + std::to_string(level) + "Sounds.txt");
+	file.open("../../TransformsAndDatafiles/Assets/alphabetLevel" + std::to_string(level) + "Sounds.txt");
 	if (file.is_open())
 	{
 		std::getline(file, s);
@@ -23,7 +23,7 @@ void AlphabetScene::load(int level)
 	file.close();
 
 	//reading background files
-	file.open("../../TransformsAndDatafiles/Assets/level" + std::to_string(level) + "Backgrounds.txt");
+	file.open("../../TransformsAndDatafiles/Assets/alphabetLevel" + std::to_string(level) + "Backgrounds.txt");
 	if (file.is_open())
 	{
 		for (int i = 0; i < numOfSounds; i++)
@@ -39,7 +39,7 @@ void AlphabetScene::load(int level)
 
 
 	//reading button files
-	file.open("../../TransformsAndDatafiles/Assets/level" + std::to_string(level) + "Buttons.txt");
+	file.open("../../TransformsAndDatafiles/Assets/alphabetLevel" + std::to_string(level) + "Buttons.txt");
 	if (file.is_open())
 	{
 		for (int i = 0; i < numOfSounds; i++)
@@ -70,7 +70,7 @@ void AlphabetScene::load(int level)
 	}
 
 	//back to menu button
-	m_menuButton = new Button(20, 10, 225, 50, "../../TransformsAndDatafiles/assets/Tellural.ttf", "Back to Menus", 30, sf::Color::Black, "../../TransformsAndDatafiles/assets/white.png");
+	m_menuButton = new Button(20, 10, 225, 50, "../../TransformsAndDatafiles/assets/Tellural.ttf", "Back to Menus", 30, sf::Color::Black);
 
 	for (int i = 0; i < numOfSounds; i++)
 	{
