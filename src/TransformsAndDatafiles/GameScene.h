@@ -24,7 +24,6 @@ public:
 //	vector<MenuButton*>;
 
 	int m_currentBackground;
-
 	int numOfSounds;
 
 	ifstream file;

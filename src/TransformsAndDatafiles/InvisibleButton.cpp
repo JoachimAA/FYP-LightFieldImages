@@ -27,14 +27,3 @@ bool InvisibleButton::mouseHovering(sf::RenderWindow & window)
 
 }
 
-bool InvisibleButton::mouseClicked(sf::RenderWindow & window)
-{
-	if (m_mouse.isButtonPressed(m_mouse.Left))
-	{
-		return true;
-	}
-	else
-	{
-		return false;
-	}
-}

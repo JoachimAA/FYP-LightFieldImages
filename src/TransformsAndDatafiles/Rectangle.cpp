@@ -16,6 +16,11 @@ void Rectangle::render(sf::RenderWindow & window)
 	window.draw(m_rectangle);
 }
 
+void Rectangle::renderSprite(sf::RenderWindow & window)
+{
+	window.draw(m_buttonSprite);
+}
+
 void Rectangle::loadTexture(std::string texture)
 {
 	if (!m_texture.loadFromFile(texture))
@@ -27,4 +32,18 @@ void Rectangle::loadTexture(std::string texture)
 void Rectangle::setFillColour(sf::Color colour)
 {
 	m_rectangle.setFillColor(colour);
+}
+
+
+
+bool Rectangle::mouseClicked(sf::RenderWindow & window)
+{
+	if (m_mouse.isButtonPressed(m_mouse.Left))
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
 }

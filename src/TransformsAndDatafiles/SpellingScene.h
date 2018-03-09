@@ -1,4 +1,5 @@
 #include "GameScene.h"
+#include "TexturedButton.h"
 
 
 
@@ -13,6 +14,7 @@ public:
 	string typeIn;
 	
 	Button * m_checkButton;
+	TexturedButton * m_nextLevel;
 
 	vector<string> vecOfAnswers;
 

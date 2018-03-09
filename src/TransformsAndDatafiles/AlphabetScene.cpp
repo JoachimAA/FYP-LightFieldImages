@@ -70,7 +70,7 @@ void AlphabetScene::load(int level)
 	}
 
 	//back to menu button
-	m_menuButton = new Button(20, 10, 225, 50, "../../TransformsAndDatafiles/assets/Tellural.ttf", "Back to Menus", 30, sf::Color::Black);
+	m_menuButton = new Button(20, 10, 225, 50, "../../TransformsAndDatafiles/assets/Tellural.ttf", "Back to Menus", 30, sf::Color::Black, "../../TransformsAndDatafiles/assets/white.png");
 
 	for (int i = 0; i < numOfSounds; i++)
 	{

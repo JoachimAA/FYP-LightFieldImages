@@ -131,6 +131,7 @@
     <ClCompile Include="..\..\TransformsAndDatafiles\SpellingScene.cpp" />
     <ClCompile Include="..\..\TransformsAndDatafiles\SplashScreen.cpp" />
     <ClCompile Include="..\..\TransformsAndDatafiles\Text.cpp" />
+    <ClCompile Include="..\..\TransformsAndDatafiles\TexturedButton.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\TransformsAndDatafiles\AlphabetScene.h" />
@@ -147,6 +148,7 @@
     <ClInclude Include="..\..\TransformsAndDatafiles\SpellingScene.h" />
     <ClInclude Include="..\..\TransformsAndDatafiles\SplashScreen.h" />
     <ClInclude Include="..\..\TransformsAndDatafiles\Text.h" />
+    <ClInclude Include="..\..\TransformsAndDatafiles\TexturedButton.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
