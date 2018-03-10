@@ -1,8 +1,4 @@
-Apple
-apple
-Banana
-banana
-Car
-car
-Duck
-duck
+Ankylosaurus
+ankylosaurus
+Diplodocus
+diplodocus

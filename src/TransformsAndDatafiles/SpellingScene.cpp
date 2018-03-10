@@ -85,15 +85,20 @@ m_menuButton = new Button(20.0f, 10.0f, 225.0f, 50.0f, "../../TransformsAndDataf
 //check answer button
 m_checkButton = new Button(20.0f, 70.0f, 225.0f, 50.0f, "../../TransformsAndDatafiles/assets/Tellural.ttf", "Check answer", 30, sf::Color::Black);
 // arrow button for next level
-m_nextLevel = new TexturedButton(1180.0f, 340.0f, 0.13f, 0.13f,"../../TransformsAndDatafiles/assets/arrow.png" );
+if (level < 2) {
+	m_nextLevel = new TexturedButton(1190.0f, 340.0f, 0.13f, 0.13f, "../../TransformsAndDatafiles/assets/arrow.png");
+	lastLevel = false;
+}
 if (level > 1) {
-	m_previousLevel = new TexturedButton(40.0f, 340.0f, 0.13f, 0.13f, "../../TransformsAndDatafiles/assets/arrow.png");
+	m_previousLevel = new TexturedButton(10.0f, 340.0f, 0.13f, 0.13f, "../../TransformsAndDatafiles/assets/arrow.png");
+	m_previousLevel->rotateSprite(180.0f);
 	firstLevel = false;
 }
 //answer typing spot
 answer = new Text("../../TransformsAndDatafiles/assets/Tellural.ttf", "", 50, sf::Color::Black, 500.0f, 10.0f);
 correct = new Text("../../TransformsAndDatafiles/assets/Tellural.ttf", "Correct!", 150, sf::Color::Green, 370.0f, 200.0f);
 incorrect = new Text("../../TransformsAndDatafiles/assets/Tellural.ttf", "Incorrect Try Again", 100, sf::Color::Red, 200.0f, 200.0f);
+correctAnswers = new Text("../../TransformsAndDatafiles/assets/Tellural.ttf", std::to_string(numOfCorrectAnswers) + "/" + std::to_string(numOfSounds), 50, sf::Color::Black , 270.0f, 0.0f);
 }
 
 
@@ -101,12 +106,24 @@ incorrect = new Text("../../TransformsAndDatafiles/assets/Tellural.ttf", "Incorr
 void SpellingScene::render(sf::RenderWindow & window)
 {
 	vecOfBackgrounds[m_currentBackground]->render(window);
+	//if i need to render the buttons
+	for (int i = 0; i < numOfSounds; i++)
+	{
+		if (i != m_currentBackground)
+		{
+			vecOfIButtons[i]->render(window);
+		}
+	}
+
 	m_menuButton->render(window);
 	m_menuButton->m_buttonText->render(window);
 	m_checkButton->render(window);
 	m_checkButton->m_buttonText->render(window);
-	m_nextLevel->renderSprite(window);
-	if (firstLevel = false) {
+	if (lastLevel == false) {
+		m_nextLevel->renderSprite(window);
+	}
+	correctAnswers->render(window);
+	if (firstLevel == false) {
 		m_previousLevel->renderSprite(window);
 	}
 	answer->render(window);
@@ -117,65 +134,82 @@ void SpellingScene::render(sf::RenderWindow & window)
 	incorrect->render(window);
 }
 
-	//if i need to render the buttons
-
-	for (int i = 0; i < numOfSounds; i++)
-	{
-		if (i != m_currentBackground)
-		{
-			vecOfIButtons[i]->render(window);
-		}
-	}
+	
 }
 
 int SpellingScene::update(sf::RenderWindow & window, sf::Clock &gameClock)
 {
 	sf::Time elapsedTime = gameClock.getElapsedTime();  //get elapsed time
-
-	for (int i = 0; i < numOfSounds; i++)
-		if (vecOfIButtons[i]->mouseHovering(window) == true)
-		{
-			if (vecOfIButtons[i]->mouseClicked(window) == true)
+	if (elapsedTime.asSeconds() > 0.2f) {
+		
+		//goes forward a level
+		if (lastLevel == false) {
+			if (m_nextLevel->mouseHovering(window) == true)
 			{
-				m_currentBackground = i;
-				sceneSoundManager.playSound(i);
-				typeIn.clear();
-				answer->setMessage(typeIn);
+				if (m_nextLevel->mouseClicked(window) == true)
+				{
+					return 4;
+				}
 			}
 		}
-	if (m_nextLevel->mouseHovering(window) == true)
-	{
-		if (m_nextLevel->mouseClicked(window) == true)
-		{
-			return 4;
+
+		//goes back a level
+		if (firstLevel == false) {
+			if (m_previousLevel->mouseHovering(window) == true)
+			{
+				if (m_previousLevel->mouseClicked(window) == true)
+				{
+					return 5;
+				}
+			}
 		}
-	}
+		//return to menu button
 
-
-	if (m_menuButton->mouseHovering(window) == true)
-	{
-		if (m_menuButton->mouseClicked(window) == true)
+		if (m_menuButton->mouseHovering(window) == true)
 		{
-			return 3;
+			if (m_menuButton->mouseClicked(window) == true)
+			{
+				return 3;
+			}
 		}
-	}
 
-	if (elapsedTime.asSeconds() > 1) {
-		gotCorrect = false;
-		gotIncorrect = false;
-	if (m_checkButton->mouseHovering(window) == true){  //check mouse is hovering 
-			if (m_checkButton->mouseClicked(window) == true) { //check mouse is clicking on button
-				for (int i = 0; i < 2; i++) { //loop twice
-					if (typeIn == vecOfAnswers[m_currentBackground * 2 + i]) { //check the answers
-						gameClock.restart(); // restart clock
-						gotCorrect = true;
-						gotIncorrect = false;
-						vecOfIButtons[m_currentBackground]->setFillColour(transparentGreen);
-						return 0;
-				    }
-					else{
-						gameClock.restart();
-						gotIncorrect = true;
+		//plays sound
+		for (int i = 0; i < numOfSounds; i++)
+			if (vecOfIButtons[i]->mouseHovering(window) == true)
+			{
+				if (vecOfIButtons[i]->mouseClicked(window) == true)
+				{
+					m_currentBackground = i;
+					sceneSoundManager.playSound(i);
+					typeIn.clear();
+					answer->setMessage(typeIn);
+				}
+			}
+
+
+		
+		//check button
+		if (elapsedTime.asSeconds() > 1) {
+			gotCorrect = false;
+			gotIncorrect = false;
+			if (m_checkButton->mouseHovering(window) == true) {  //check mouse is hovering 
+				if (m_checkButton->mouseClicked(window) == true) { //check mouse is clicking on button
+					for (int i = 0; i < 2; i++) { //loop twice
+						if (typeIn == vecOfAnswers[m_currentBackground * 2 + i]) { //check the answers
+							gameClock.restart(); // restart clock
+							gotCorrect = true;
+							gotIncorrect = false;
+							if (vecOfIButtons[m_currentBackground]->m_rectangle.getFillColor() != transparentGreen) {
+								vecOfIButtons[m_currentBackground]->m_rectangle.setFillColor(transparentGreen);
+								numOfCorrectAnswers++;
+								correctAnswers->setMessage(std::to_string(numOfCorrectAnswers) + "/" + std::to_string(numOfSounds));
+							}
+							return 0;
+						}
+						else {
+							gameClock.restart();
+							gotIncorrect = true;
+						}
 					}
 				}
 			}

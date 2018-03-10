@@ -18,11 +18,11 @@ public:
 	float getXMax();
 	float getYMax();
 
-	void setFillColour(sf::Color colour);
-
 	void render(sf::RenderWindow &window);
 	void renderSprite(sf::RenderWindow & window);
 	void loadTexture(std::string texture);
+	void rotateSprite(float angle);
+
 
 	bool mouseClicked(sf::RenderWindow &window);
 };

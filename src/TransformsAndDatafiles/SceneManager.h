@@ -16,7 +16,7 @@ public:
 	void handleInput(sf::Event &ev);
 
 
-	void nextScene(int level);
+	void nextScene(int level, sf::Clock &gameClock);
 	void backToMenu();
 
 	int m_currentScene;

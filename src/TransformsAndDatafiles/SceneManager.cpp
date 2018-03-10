@@ -37,16 +37,19 @@ void SceneManager::updateScene(sf::RenderWindow &window, sf::Clock &gameClock)
 	if (updateReturn == 3){
 		backToMenu();
 	} else if (updateReturn == 1){
-		nextScene(1);
+		nextScene(1, gameClock);
     } else if (updateReturn == 2){
-		nextScene(2);
+		nextScene(2, gameClock);
 	}
 	else if (updateReturn == 4){
-		nextScene(4);
+		nextScene(4, gameClock);
+	}
+	else if (updateReturn == 5) {
+		nextScene(5, gameClock);
 	}
 }
 
-void SceneManager::nextScene(int level)
+void SceneManager::nextScene(int level, sf::Clock &gameClock)
 {
 
 	if (level == 1){
@@ -58,7 +61,10 @@ void SceneManager::nextScene(int level)
 	if (level == 4){
 	m_currentScene++;
 	}
-
+	if (level == 5){
+	m_currentScene--;
+	}
+	gameClock.restart();
 }
 
 void SceneManager::backToMenu()

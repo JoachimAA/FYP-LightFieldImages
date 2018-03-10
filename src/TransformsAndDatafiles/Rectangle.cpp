@@ -29,13 +29,6 @@ void Rectangle::loadTexture(std::string texture)
 	}
 }
 
-void Rectangle::setFillColour(sf::Color colour)
-{
-	m_rectangle.setFillColor(colour);
-}
-
-
-
 bool Rectangle::mouseClicked(sf::RenderWindow & window)
 {
 	if (m_mouse.isButtonPressed(m_mouse.Left))
@@ -46,4 +39,10 @@ bool Rectangle::mouseClicked(sf::RenderWindow & window)
 	{
 		return false;
 	}
+}
+
+void Rectangle::rotateSprite(float angle)
+{
+	m_buttonSprite.rotate(angle);
+	m_buttonSprite.move(sf::Vector2f(xMax - xPosition, yMax - yPosition));
 }

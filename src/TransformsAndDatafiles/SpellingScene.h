@@ -22,12 +22,16 @@ public:
 	bool gotCorrect = false;
 	bool gotIncorrect = false;
 	bool firstLevel = true;
+	bool lastLevel = true;
+
+	int numOfCorrectAnswers = 0;
 
 	sf::Color transparentGreen = sf::Color(0, 255, 0, 40);
 
 	Text * answer;
 	Text * correct;
 	Text * incorrect;
+	Text * correctAnswers;
 	
 	
 

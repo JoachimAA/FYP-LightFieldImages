@@ -1,5 +1,3 @@
-4
-../../TransformsAndDatafiles/assets/Apple.wav
-../../TransformsAndDatafiles/assets/Banana.wav
-../../TransformsAndDatafiles/assets/Car.wav
-../../TransformsAndDatafiles/assets/Duck.wav
+2
+../../TransformsAndDatafiles/assets/Ankylosaurus.wav
+../../TransformsAndDatafiles/assets/Diplodocus.wav
