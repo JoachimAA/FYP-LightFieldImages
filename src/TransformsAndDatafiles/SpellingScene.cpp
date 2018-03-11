@@ -119,7 +119,7 @@ void SpellingScene::render(sf::RenderWindow & window)
 	m_menuButton->m_buttonText->render(window);
 	m_checkButton->render(window);
 	m_checkButton->m_buttonText->render(window);
-	if (lastLevel == false) {
+	if (lastLevel == false && numOfCorrectAnswers == numOfSounds) {
 		m_nextLevel->renderSprite(window);
 	}
 	correctAnswers->render(window);
@@ -143,12 +143,15 @@ int SpellingScene::update(sf::RenderWindow & window, sf::Clock &gameClock)
 	if (elapsedTime.asSeconds() > 0.2f) {
 		
 		//goes forward a level
-		if (lastLevel == false) {
-			if (m_nextLevel->mouseHovering(window) == true)
-			{
-				if (m_nextLevel->mouseClicked(window) == true)
+		if (numOfCorrectAnswers == numOfSounds){
+			correctAnswers->m_text.setColor(sf::Color::Green);
+			if (lastLevel == false) {
+				if (m_nextLevel->mouseHovering(window) == true)
 				{
-					return 4;
+					if (m_nextLevel->mouseClicked(window) == true)
+					{
+						return 4;
+					}
 				}
 			}
 		}
@@ -169,7 +172,7 @@ int SpellingScene::update(sf::RenderWindow & window, sf::Clock &gameClock)
 		{
 			if (m_menuButton->mouseClicked(window) == true)
 			{
-				return 3;
+				return 1;
 			}
 		}
 
@@ -189,8 +192,8 @@ int SpellingScene::update(sf::RenderWindow & window, sf::Clock &gameClock)
 
 		
 		//check button
-		if (elapsedTime.asSeconds() > 1) {
-			gotCorrect = false;
+		if (elapsedTime.asSeconds() > 1) {  //resets the correct and incorrect message so it disappears
+			gotCorrect = false;  
 			gotIncorrect = false;
 			if (m_checkButton->mouseHovering(window) == true) {  //check mouse is hovering 
 				if (m_checkButton->mouseClicked(window) == true) { //check mouse is clicking on button
@@ -202,7 +205,7 @@ int SpellingScene::update(sf::RenderWindow & window, sf::Clock &gameClock)
 							if (vecOfIButtons[m_currentBackground]->m_rectangle.getFillColor() != transparentGreen) {
 								vecOfIButtons[m_currentBackground]->m_rectangle.setFillColor(transparentGreen);
 								numOfCorrectAnswers++;
-								correctAnswers->setMessage(std::to_string(numOfCorrectAnswers) + "/" + std::to_string(numOfSounds));
+	    						correctAnswers->setMessage(std::to_string(numOfCorrectAnswers) + "/" + std::to_string(numOfSounds)); 							
 							}
 							return 0;
 						}

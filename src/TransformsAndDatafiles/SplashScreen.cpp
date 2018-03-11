@@ -29,7 +29,7 @@ int SplashScreen::update(sf::RenderWindow &window, sf::Clock &gameClock)
 	{
 		if (m_spellingButton->mouseClicked(window) == true)
 		{
-			return 1;
+			return 2;
 		}
 	}
 
@@ -37,7 +37,7 @@ int SplashScreen::update(sf::RenderWindow &window, sf::Clock &gameClock)
 	{
 		if (m_alphabetButton->mouseClicked(window) == true)
 		{
-			return 2;
+			return 3;
 		}
 	}
 	return 0;

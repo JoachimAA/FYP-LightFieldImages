@@ -30,39 +30,51 @@ void SceneManager::renderScene(sf::RenderWindow &window)
 
 
 void SceneManager::updateScene(sf::RenderWindow &window, sf::Clock &gameClock)
-{// 3 back to menu 1 scene index 2 scene index
-	//updating the current scene 
+{
+	//1 return to menu
+	//2 spelling scene 
+	//3 alphabet scene
+	//4 next level
+	//5 previous level
 
-	updateReturn = m_scenes[m_currentScene]->update(window, gameClock);
-	if (updateReturn == 3){
+	updateReturn = m_scenes[m_currentScene]->update(window, gameClock);  //updates game
+
+	switch (updateReturn)
+	{
+	case 1: 
 		backToMenu();
-	} else if (updateReturn == 1){
-		nextScene(1, gameClock);
-    } else if (updateReturn == 2){
+		break;
+	case 2:
 		nextScene(2, gameClock);
-	}
-	else if (updateReturn == 4){
+		break;
+	case 3:
+		nextScene(3, gameClock);
+		break;
+	case 4:
 		nextScene(4, gameClock);
-	}
-	else if (updateReturn == 5) {
+		break;
+	case 5:
 		nextScene(5, gameClock);
+		break;
 	}
 }
 
 void SceneManager::nextScene(int level, sf::Clock &gameClock)
 {
-
-	if (level == 1){
+	switch (level)
+	{
+	case 2:
 		m_currentScene = 1;
-	} else 
-	if (level == 2){
+		break;
+	case 3:
 		m_currentScene = spellingLevels + 1; //amount of spelling levels + 1 index so it gets the first alphabet level
-	} else 
-	if (level == 4){
-	m_currentScene++;
-	}
-	if (level == 5){
-	m_currentScene--;
+		break;
+	case 4:
+		m_currentScene++;
+		break;
+	case 5:
+		m_currentScene--;
+		break;
 	}
 	gameClock.restart();
 }

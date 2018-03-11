@@ -113,7 +113,7 @@ int AlphabetScene::update(sf::RenderWindow & window, sf::Clock &gameClock)
 	{
 		if (m_menuButton->mouseClicked(window) == true)
 		{
-			return 3;
+			return 1;
 		}
 	}
 	return 0;
