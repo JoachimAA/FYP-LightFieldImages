@@ -5,6 +5,7 @@
 #include <sstream>
 #include "InvisibleButton.h"
 #include "Text.h"
+#include "TexturedButton.h"
 
 
 using namespace std;
@@ -25,6 +26,12 @@ public:
 
 	int m_currentBackground;
 	int numOfSounds;
+
+	bool firstLevel = true;
+	bool lastLevel = true;
+
+	TexturedButton * m_nextLevel;
+	TexturedButton * m_previousLevel;
 
 	ifstream file;
 	string s;

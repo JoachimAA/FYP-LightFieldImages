@@ -1,0 +1,4 @@
+../../TransformsAndDatafiles/assets/PenFocus.jpg
+../../TransformsAndDatafiles/assets/StaplerFocus.jpg
+../../TransformsAndDatafiles/assets/ScissorsFocus.jpg
+../../TransformsAndDatafiles/assets/RulerFocus.jpg

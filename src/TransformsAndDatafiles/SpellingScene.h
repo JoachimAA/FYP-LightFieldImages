@@ -1,5 +1,5 @@
 #include "GameScene.h"
-#include "TexturedButton.h"
+
 
 
 
@@ -14,15 +14,13 @@ public:
 	string typeIn;
 	
 	Button * m_checkButton;
-	TexturedButton * m_nextLevel;
-	TexturedButton * m_previousLevel;
+
 
 	vector<string> vecOfAnswers;
 
 	bool gotCorrect = false;
 	bool gotIncorrect = false;
-	bool firstLevel = true;
-	bool lastLevel = true;
+
 
 	int numOfCorrectAnswers = 0;
 

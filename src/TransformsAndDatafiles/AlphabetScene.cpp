@@ -78,44 +78,87 @@ void AlphabetScene::load(int level)
 
 	}
 
+	if (level < 2) {
+		m_nextLevel = new TexturedButton(1190.0f, 340.0f, 0.13f, 0.13f, "../../TransformsAndDatafiles/assets/arrow.png");
+		lastLevel = false;
+	}
+	if (level > 1) {
+		m_previousLevel = new TexturedButton(10.0f, 340.0f, 0.13f, 0.13f, "../../TransformsAndDatafiles/assets/arrow.png");
+		m_previousLevel->rotateSprite(180.0f);
+		firstLevel = false;
+	}
+
 }
 
 void AlphabetScene::render(sf::RenderWindow & window)
 {
-	vecOfBackgrounds[m_currentBackground]->render(window);
-	m_menuButton->render(window);
-	m_menuButton->m_buttonText->render(window);
+	
+		vecOfBackgrounds[m_currentBackground]->render(window);
+		m_menuButton->render(window);
+		m_menuButton->m_buttonText->render(window);
 
-	//if i need to render the buttons
+		if (lastLevel == false) {
+			m_nextLevel->renderSprite(window);  //render next level arrow
+		};
+		if (firstLevel == false) {
+			m_previousLevel->renderSprite(window);  //render previous level arrow
+		};
 
-	for (int i = 0; i < numOfSounds; i++)
-	{
-		if (i != m_currentBackground)
+		//if i need to render the buttons
+
+		for (int i = 0; i < numOfSounds; i++)
 		{
-			vecOfIButtons[i]->render(window);
-		}
-	}
-}
-
-int AlphabetScene::update(sf::RenderWindow & window, sf::Clock &gameClock)
-{
-	for (int i = 0; i < numOfSounds; i++)
-		if (vecOfIButtons[i]->mouseHovering(window) == true)
-		{
-			if (vecOfIButtons[i]->mouseClicked(window) == true)
+			if (i != m_currentBackground)
 			{
-				m_currentBackground = i;
-				sceneSoundManager.playSound(i);
+				vecOfIButtons[i]->render(window);
 			}
 		}
+	
+}
 
-	if (m_menuButton->mouseHovering(window) == true)
+	int AlphabetScene::update(sf::RenderWindow & window, sf::Clock &gameClock)
 	{
-		if (m_menuButton->mouseClicked(window) == true)
-		{
-			return 1;
+		sf::Time elapsedTime = gameClock.getElapsedTime();  //get elapsed time
+		if (elapsedTime.asSeconds() > 0.2f) {
+			
+
+			if (m_menuButton->mouseHovering(window) == true)
+			{
+				if (m_menuButton->mouseClicked(window) == true)
+				{
+					return 1;
+				}
+			}
+
+			if (firstLevel == false) {  //goes back a level
+				if (m_previousLevel->mouseHovering(window) == true)
+				{
+					if (m_previousLevel->mouseClicked(window) == true)
+					{
+						return 5;
+					}
+				}
+			}
+
+			if (lastLevel == false) {
+				if (m_nextLevel->mouseHovering(window) == true)
+				{
+					if (m_nextLevel->mouseClicked(window) == true)
+					{
+						return 4;
+					}
+				}
+			}
+			for (int i = 0; i < numOfSounds; i++)
+				if (vecOfIButtons[i]->mouseHovering(window) == true)
+				{
+					if (vecOfIButtons[i]->mouseClicked(window) == true)
+					{
+						m_currentBackground = i;
+						sceneSoundManager.playSound(i);
+					}
+				}
 		}
-	}
 	return 0;
 }
 

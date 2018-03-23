@@ -85,7 +85,7 @@ m_menuButton = new Button(20.0f, 10.0f, 225.0f, 50.0f, "../../TransformsAndDataf
 //check answer button
 m_checkButton = new Button(20.0f, 70.0f, 225.0f, 50.0f, "../../TransformsAndDatafiles/assets/Tellural.ttf", "Check answer", 30, sf::Color::Black);
 // arrow button for next level
-if (level < 2) {
+if (level < 4) {
 	m_nextLevel = new TexturedButton(1190.0f, 340.0f, 0.13f, 0.13f, "../../TransformsAndDatafiles/assets/arrow.png");
 	lastLevel = false;
 }
@@ -95,7 +95,7 @@ if (level > 1) {
 	firstLevel = false;
 }
 //answer typing spot
-answer = new Text("../../TransformsAndDatafiles/assets/Tellural.ttf", "", 50, sf::Color::Black, 500.0f, 10.0f);
+answer = new Text("../../TransformsAndDatafiles/assets/Tellural.ttf", "", 50, sf::Color::Black, 370.0f, 0.0f);
 correct = new Text("../../TransformsAndDatafiles/assets/Tellural.ttf", "Correct!", 150, sf::Color::Green, 370.0f, 200.0f);
 incorrect = new Text("../../TransformsAndDatafiles/assets/Tellural.ttf", "Incorrect Try Again", 100, sf::Color::Red, 200.0f, 200.0f);
 correctAnswers = new Text("../../TransformsAndDatafiles/assets/Tellural.ttf", std::to_string(numOfCorrectAnswers) + "/" + std::to_string(numOfSounds), 50, sf::Color::Black , 270.0f, 0.0f);
@@ -122,6 +122,7 @@ void SpellingScene::render(sf::RenderWindow & window)
 	if (lastLevel == false && numOfCorrectAnswers == numOfSounds) {
 		m_nextLevel->renderSprite(window);
 	}
+	//m_nextLevel->renderSprite(window);//********
 	correctAnswers->render(window);
 	if (firstLevel == false) {
 		m_previousLevel->renderSprite(window);
@@ -155,6 +156,15 @@ int SpellingScene::update(sf::RenderWindow & window, sf::Clock &gameClock)
 				}
 			}
 		}
+		//*********
+		/*if (m_nextLevel->mouseHovering(window) == true)
+		{
+			if (m_nextLevel->mouseClicked(window) == true)
+			{
+				return 4;
+			}
+		}*/
+
 
 		//goes back a level
 		if (firstLevel == false) {
@@ -210,6 +220,13 @@ int SpellingScene::update(sf::RenderWindow & window, sf::Clock &gameClock)
 							return 0;
 						}
 						else {
+							/*for (i = 0; i < typeIn.size(); i++)
+							{
+								if (typeIn.begin() + i != vecOfAnswers[m_currentBackground].begin() + i)
+								{
+									answer->changeCharColour(i);
+								}
+							}*/
 							gameClock.restart();
 							gotIncorrect = true;
 						}

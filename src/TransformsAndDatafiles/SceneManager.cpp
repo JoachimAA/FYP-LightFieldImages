@@ -8,14 +8,14 @@ void SceneManager::loadScene()
 	m_currentScene = 0;
 	
 
-	for (int i = 0; i < spellingLevels; i++){
+	for (int i = 0; i < m_spellingLevels; i++){
 		m_scenes.push_back(new SpellingScene());  //pushing back
 		m_scenes[i + 1]->load(i + 1);     //loading 
 	}
 	
-	for (int i = 0; i < AlphabetLevels; i++){
+	for (int i = 0; i < m_AlphabetLevels; i++){
 		m_scenes.push_back(new AlphabetScene());
-		m_scenes[i + spellingLevels + 1]->load(i + 1);
+		m_scenes[i + m_spellingLevels + 1]->load(i + 1);
 	}
 
 	m_scenes[m_currentScene]->load(0);
@@ -67,7 +67,7 @@ void SceneManager::nextScene(int level, sf::Clock &gameClock)
 		m_currentScene = 1;
 		break;
 	case 3:
-		m_currentScene = spellingLevels + 1; //amount of spelling levels + 1 index so it gets the first alphabet level
+		m_currentScene = m_spellingLevels + 1; //amount of spelling levels + 1 index so it gets the first alphabet level
 		break;
 	case 4:
 		m_currentScene++;

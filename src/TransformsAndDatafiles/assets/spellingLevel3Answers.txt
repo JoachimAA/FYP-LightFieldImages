@@ -1,0 +1,8 @@
+Pen
+pen
+Stapler
+stapler
+Scissors
+scissors
+Ruler
+ruler
