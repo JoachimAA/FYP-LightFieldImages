@@ -22,6 +22,19 @@ void AlphabetScene::load(int level)
 	}
 	file.close();
 
+	file.open("../../TransformsAndDatafiles/Assets/alphabetLevel" + std::to_string(level) + "Hints.txt");
+	if (file.is_open())
+	{
+		for (int i = 0; i < numOfSounds; i++)
+		{
+			getline(file, s);
+			vecOfHints.push_back(s);
+
+		}
+	}
+
+	file.close();
+
 	//reading background files
 	file.open("../../TransformsAndDatafiles/Assets/alphabetLevel" + std::to_string(level) + "Backgrounds.txt");
 	if (file.is_open())
@@ -71,6 +84,7 @@ void AlphabetScene::load(int level)
 
 	//back to menu button
 	m_menuButton = new Button(20, 10, 225, 50, "../../TransformsAndDatafiles/assets/Tellural.ttf", "Back to Menus", 30, sf::Color::Black);
+	m_hints = new Text("../../TransformsAndDatafiles/assets/Tellural.ttf", vecOfHints[0], 150, sf::Color::Green, 400.0f, 200.0f);
 
 	for (int i = 0; i < numOfSounds; i++)
 	{
@@ -78,6 +92,7 @@ void AlphabetScene::load(int level)
 
 	}
 
+	//back and forth from levels arrows
 	if (level < 2) {
 		m_nextLevel = new TexturedButton(1190.0f, 340.0f, 0.13f, 0.13f, "../../TransformsAndDatafiles/assets/arrow.png");
 		lastLevel = false;
@@ -113,6 +128,11 @@ void AlphabetScene::render(sf::RenderWindow & window)
 				vecOfIButtons[i]->render(window);
 			}
 		}
+		if (displayHint == true)
+		{
+			m_hints->setMessage(vecOfHints[m_currentBackground]);
+			m_hints->render(window);
+		}
 	
 }
 
@@ -120,7 +140,7 @@ void AlphabetScene::render(sf::RenderWindow & window)
 	{
 		sf::Time elapsedTime = gameClock.getElapsedTime();  //get elapsed time
 		if (elapsedTime.asSeconds() > 0.2f) {
-			
+
 
 			if (m_menuButton->mouseHovering(window) == true)
 			{
@@ -149,15 +169,22 @@ void AlphabetScene::render(sf::RenderWindow & window)
 					}
 				}
 			}
-			for (int i = 0; i < numOfSounds; i++)
-				if (vecOfIButtons[i]->mouseHovering(window) == true)
-				{
-					if (vecOfIButtons[i]->mouseClicked(window) == true)
+			if (elapsedTime.asSeconds() > 2) {
+				displayHint = false;
+
+				for (int i = 0; i < numOfSounds; i++)
+
+					if (vecOfIButtons[i]->mouseHovering(window) == true)
 					{
-						m_currentBackground = i;
-						sceneSoundManager.playSound(i);
+						if (vecOfIButtons[i]->mouseClicked(window) == true)
+						{
+							gameClock.restart();
+							displayHint = true;
+							m_currentBackground = i;
+							sceneSoundManager.playSound(i);
+						}
 					}
-				}
+			}
 		}
 	return 0;
 }

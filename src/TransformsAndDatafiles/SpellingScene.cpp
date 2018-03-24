@@ -192,10 +192,10 @@ int SpellingScene::update(sf::RenderWindow & window, sf::Clock &gameClock)
 			{
 				if (vecOfIButtons[i]->mouseClicked(window) == true)
 				{
-					m_currentBackground = i;
-					sceneSoundManager.playSound(i);
-					typeIn.clear();
-					answer->setMessage(typeIn);
+					m_currentBackground = i;  //sets the new background
+					sceneSoundManager.playSound(i); //plays sound for that background
+					typeIn.clear();   //clear the type in string
+					answer->setMessage(typeIn);  //set the type in bar to empty
 				}
 			}
 

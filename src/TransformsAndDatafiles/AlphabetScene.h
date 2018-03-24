@@ -8,6 +8,8 @@ class AlphabetScene : public GameScene
 	void render(sf::RenderWindow &window) override;
 	int update(sf::RenderWindow &window, sf::Clock &gameClock) override;
 
+	vector<string> vecOfHints;
+	Text * m_hints;
 
-
+	bool displayHint;
 };
