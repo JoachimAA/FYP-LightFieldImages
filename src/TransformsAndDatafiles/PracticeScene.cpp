@@ -1,62 +1,34 @@
-#include "AlphabetScene.h"
+#include "PracticeScene.h"
 
-void AlphabetScene::load(int level)
+void PracticeScene::load(int level)
 {
-	//reading sound files
-	file.open("../../TransformsAndDatafiles/Assets/alphabetLevel" + std::to_string(level) + "Sounds.txt");
+	//reading files
+	file.open("../../TransformsAndDatafiles/Assets/practiceLevel" + std::to_string(level) + ".txt");
 	if (file.is_open())
 	{
+		//sounds
 		std::getline(file, s);
 		ss.str(s);
 		ss >> numOfSounds;
 		ss.clear();
-		for (int i = 0; i < numOfSounds; i++)
-		{
+		for (int i = 0; i < numOfSounds; i++){
 			std::getline(file, s);
 			vecOfSounds.push_back(s);
-
 		}
-	}
-	else {
-		std::cout << "cannot open sound file" << endl;
-	}
-	file.close();
-
-	file.open("../../TransformsAndDatafiles/Assets/alphabetLevel" + std::to_string(level) + "Hints.txt");
-	if (file.is_open())
-	{
-		for (int i = 0; i < numOfSounds; i++)
-		{
+		//hints
+		for (int i = 0; i < numOfSounds; i++){
 			getline(file, s);
 			vecOfHints.push_back(s);
-
 		}
-	}
-
-	file.close();
-
-	//reading background files
-	file.open("../../TransformsAndDatafiles/Assets/alphabetLevel" + std::to_string(level) + "Backgrounds.txt");
-	if (file.is_open())
-	{
-		for (int i = 0; i < numOfSounds; i++)
-		{
-			getline(file, s);
+		//backgrounds
+		for (int i = 0; i < numOfSounds; i++){
+	     	getline(file, s);
 			m_background = new Background(0, 0, 1280, 720, s);
 			vecOfBackgrounds.push_back(m_background);
 		}
+		//buttons
 		m_currentBackground = 0; //setting the background number
-	}
-	file.close();
-
-
-
-	//reading button files
-	file.open("../../TransformsAndDatafiles/Assets/alphabetLevel" + std::to_string(level) + "Buttons.txt");
-	if (file.is_open())
-	{
-		for (int i = 0; i < numOfSounds; i++)
-		{
+		for (int i = 0; i < numOfSounds; i++){
 			float xPos, yPos, xSize, ySize;
 			getline(file, s);
 			ss.str(s);
@@ -79,21 +51,20 @@ void AlphabetScene::load(int level)
 		}
 	}
 	else {
-		std::cout << "cannot open button file\n";
+		std::cout << "cannot open sound file" << endl;
 	}
+	file.close();
 
 	//back to menu button
 	m_menuButton = new Button(20, 10, 225, 50, "../../TransformsAndDatafiles/assets/Tellural.ttf", "Back to Menus", 30, sf::Color::Black);
-	m_hints = new Text("../../TransformsAndDatafiles/assets/Tellural.ttf", vecOfHints[0], 150, sf::Color::Green, 400.0f, 200.0f);
+	m_hints = new Text("../../TransformsAndDatafiles/assets/Tellural.ttf", vecOfHints[0], 100, sf::Color::Green, 270.0f, -15.0f);
 
-	for (int i = 0; i < numOfSounds; i++)
-	{
+	for (int i = 0; i < numOfSounds; i++){
 		sceneSoundManager.loadSound(vecOfSounds[i]);
-
 	}
 
 	//back and forth from levels arrows
-	if (level < 2) {
+	if (level < 4) { //number of levels
 		m_nextLevel = new TexturedButton(1190.0f, 340.0f, 0.13f, 0.13f, "../../TransformsAndDatafiles/assets/arrow.png");
 		lastLevel = false;
 	}
@@ -105,7 +76,7 @@ void AlphabetScene::load(int level)
 
 }
 
-void AlphabetScene::render(sf::RenderWindow & window)
+void PracticeScene::render(sf::RenderWindow & window)
 {
 	
 		vecOfBackgrounds[m_currentBackground]->render(window);
@@ -121,50 +92,41 @@ void AlphabetScene::render(sf::RenderWindow & window)
 
 		//if i need to render the buttons
 
-		for (int i = 0; i < numOfSounds; i++)
-		{
-			if (i != m_currentBackground)
-			{
+		for (int i = 0; i < numOfSounds; i++){
+			if (i != m_currentBackground){
 				vecOfIButtons[i]->render(window);
 			}
 		}
-		if (displayHint == true)
-		{
+		if (displayHint == true){
 			m_hints->setMessage(vecOfHints[m_currentBackground]);
 			m_hints->render(window);
 		}
 	
 }
 
-	int AlphabetScene::update(sf::RenderWindow & window, sf::Clock &gameClock)
+	int PracticeScene::update(sf::RenderWindow & window, sf::Clock &gameClock)
 	{
 		sf::Time elapsedTime = gameClock.getElapsedTime();  //get elapsed time
 		if (elapsedTime.asSeconds() > 0.2f) {
 
 
-			if (m_menuButton->mouseHovering(window) == true)
-			{
-				if (m_menuButton->mouseClicked(window) == true)
-				{
+			if (m_menuButton->mouseHovering(window) == true){
+				if (m_menuButton->mouseClicked(window) == true){
 					return 1;
 				}
 			}
 
 			if (firstLevel == false) {  //goes back a level
-				if (m_previousLevel->mouseHovering(window) == true)
-				{
-					if (m_previousLevel->mouseClicked(window) == true)
-					{
+				if (m_previousLevel->mouseHovering(window) == true){
+					if (m_previousLevel->mouseClicked(window) == true){
 						return 5;
 					}
 				}
 			}
 
 			if (lastLevel == false) {
-				if (m_nextLevel->mouseHovering(window) == true)
-				{
-					if (m_nextLevel->mouseClicked(window) == true)
-					{
+				if (m_nextLevel->mouseHovering(window) == true){
+					if (m_nextLevel->mouseClicked(window) == true){
 						return 4;
 					}
 				}
@@ -174,10 +136,8 @@ void AlphabetScene::render(sf::RenderWindow & window)
 
 				for (int i = 0; i < numOfSounds; i++)
 
-					if (vecOfIButtons[i]->mouseHovering(window) == true)
-					{
-						if (vecOfIButtons[i]->mouseClicked(window) == true)
-						{
+				 if (vecOfIButtons[i]->mouseHovering(window) == true){
+						if (vecOfIButtons[i]->mouseClicked(window) == true){
 							gameClock.restart();
 							displayHint = true;
 							m_currentBackground = i;
@@ -190,6 +150,6 @@ void AlphabetScene::render(sf::RenderWindow & window)
 }
 
 
-void AlphabetScene::handleInput(sf::Event & ev)
+void PracticeScene::handleInput(sf::Event & ev)
 {
 }

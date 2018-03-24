@@ -117,7 +117,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\TransformsAndDatafiles\AlphabetScene.cpp" />
+    <ClCompile Include="..\..\TransformsAndDatafiles\PracticeScene.cpp" />
     <ClCompile Include="..\..\TransformsAndDatafiles\Background.cpp" />
     <ClCompile Include="..\..\TransformsAndDatafiles\Game.cpp" />
     <ClCompile Include="..\..\TransformsAndDatafiles\GameObject.cpp" />
@@ -134,7 +134,7 @@
     <ClCompile Include="..\..\TransformsAndDatafiles\TexturedButton.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\TransformsAndDatafiles\AlphabetScene.h" />
+    <ClInclude Include="..\..\TransformsAndDatafiles\PracticeScene.h" />
     <ClInclude Include="..\..\TransformsAndDatafiles\Background.h" />
     <ClInclude Include="..\..\TransformsAndDatafiles\Game.h" />
     <ClInclude Include="..\..\TransformsAndDatafiles\GameObject.h" />

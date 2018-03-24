@@ -14,7 +14,7 @@ void SceneManager::loadScene()
 	}
 	
 	for (int i = 0; i < m_AlphabetLevels; i++){
-		m_scenes.push_back(new AlphabetScene());
+		m_scenes.push_back(new PracticeScene());
 		m_scenes[i + m_spellingLevels + 1]->load(i + 1);
 	}
 

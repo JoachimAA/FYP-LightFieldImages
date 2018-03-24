@@ -1,4 +1,0 @@
-../../TransformsAndDatafiles/assets/AppleFocus.jpg
-../../TransformsAndDatafiles/assets/BananaFocus.jpg
-../../TransformsAndDatafiles/assets/CarFocus.jpg
-../../TransformsAndDatafiles/assets/DuckFocus.jpg

@@ -4,7 +4,7 @@
 #include <vector>
 #include "SplashScreen.h"
 #include "SpellingScene.h"
-#include "AlphabetScene.h"
+#include "PracticeScene.h"
 
 class SceneManager
 {
@@ -21,7 +21,7 @@ public:
 
 	int m_currentScene;
 	int m_spellingLevels = 4;
-	int m_AlphabetLevels = 2;
+	int m_AlphabetLevels = 4;
 	int updateReturn;
 
 	std::vector<Scene*> m_scenes; 

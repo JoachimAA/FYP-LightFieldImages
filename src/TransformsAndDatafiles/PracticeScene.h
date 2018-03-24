@@ -1,7 +1,7 @@
 #pragma once
 #include "GameScene.h"
 
-class AlphabetScene : public GameScene
+class PracticeScene : public GameScene
 {
 	void load(int level) override;
 	void handleInput(sf::Event &ev) override;

@@ -1,0 +1,15 @@
+2
+../../TransformsAndDatafiles/assets/DiplodocusPractice.wav
+../../TransformsAndDatafiles/assets/AnkylosaurusPractice.wav
+Diplodocus
+Ankylosaurus
+../../TransformsAndDatafiles/assets/DiplodocusFocus.jpg
+../../TransformsAndDatafiles/assets/AnkylosaurusFocus.jpg
+220 
+400
+150
+150
+1120
+80
+120
+100
