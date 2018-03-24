@@ -1,5 +1,0 @@
-4
-../../TransformsAndDatafiles/assets/AppleSpelling.wav
-../../TransformsAndDatafiles/assets/BananaSpelling.wav
-../../TransformsAndDatafiles/assets/CarSpelling.wav
-../../TransformsAndDatafiles/assets/DuckSpelling.wav

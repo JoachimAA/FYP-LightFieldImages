@@ -110,40 +110,38 @@ void PracticeScene::render(sf::RenderWindow & window)
 		if (elapsedTime.asSeconds() > 0.2f) {
 
 
-			if (m_menuButton->mouseHovering(window) == true){
-				if (m_menuButton->mouseClicked(window) == true){
+			if (m_menuButton->mouseHovering(window) == true) {
+				if (m_menuButton->mouseClicked(window) == true) {
 					return 1;
 				}
 			}
 
 			if (firstLevel == false) {  //goes back a level
-				if (m_previousLevel->mouseHovering(window) == true){
-					if (m_previousLevel->mouseClicked(window) == true){
+				if (m_previousLevel->mouseHovering(window) == true) {
+					if (m_previousLevel->mouseClicked(window) == true) {
 						return 5;
 					}
 				}
 			}
 
 			if (lastLevel == false) {
-				if (m_nextLevel->mouseHovering(window) == true){
-					if (m_nextLevel->mouseClicked(window) == true){
+				if (m_nextLevel->mouseHovering(window) == true) {
+					if (m_nextLevel->mouseClicked(window) == true) {
 						return 4;
 					}
 				}
 			}
-			if (elapsedTime.asSeconds() > 2) {
-				displayHint = false;
 
-				for (int i = 0; i < numOfSounds; i++)
-
-				 if (vecOfIButtons[i]->mouseHovering(window) == true){
-						if (vecOfIButtons[i]->mouseClicked(window) == true){
-							gameClock.restart();
-							displayHint = true;
-							m_currentBackground = i;
-							sceneSoundManager.playSound(i);
-						}
+			for (int i = 0; i < numOfSounds; i++) {
+				if (vecOfIButtons[i]->mouseHovering(window) == true) {
+					if (vecOfIButtons[i]->mouseClicked(window) == true) {
+						gameClock.restart();
+						displayHint = true;
+						m_currentBackground = i;
+						sceneSoundManager.playSound(i);
 					}
+				}
+
 			}
 		}
 	return 0;

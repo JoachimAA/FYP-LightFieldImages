@@ -1,4 +1,0 @@
-../../TransformsAndDatafiles/assets/EggFocus.jpg
-../../TransformsAndDatafiles/assets/ForkFocus.jpg
-../../TransformsAndDatafiles/assets/GlassFocus.jpg
-../../TransformsAndDatafiles/assets/HatFocus.jpg

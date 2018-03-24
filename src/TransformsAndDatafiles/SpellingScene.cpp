@@ -4,39 +4,33 @@
 void SpellingScene::load(int level)
 {
 //reading sound files
-file.open("../../TransformsAndDatafiles/Assets/spellingLevel" + std::to_string(level) + "Sounds.txt");
+file.open("../../TransformsAndDatafiles/Assets/spellingLevel" + std::to_string(level) + ".txt");
 if (file.is_open()) {
+
+	// 1 Sound effect obtained from https ://www.zapsplat.com
 	std::getline(file, s);
 	ss.str(s);
 	ss >> numOfSounds;
 	ss.clear();
-	for (int i = 0; i < numOfSounds; i++) {
+	for (int i = 0; i < numOfSounds + 1; i++) {
 		std::getline(file, s);
 		vecOfSounds.push_back(s);
 	}
-}
-else {
-	std::cout << "cannot open sound file" << endl;
-}
-file.close();
-
-//reading background files
-file.open("../../TransformsAndDatafiles/Assets/spellingLevel" + std::to_string(level) + "Backgrounds.txt");
-if (file.is_open()) {
+	//backgrounds
 	for (int i = 0; i < numOfSounds; i++) {
 		getline(file, s);
 		m_background = new Background(0, 0, 1280, 720, s);
 		vecOfBackgrounds.push_back(m_background);
 	}
+
+	//answers
+	for (int i = 0; i < numOfSounds * 2; i++) {
+		getline(file, s);
+		vecOfAnswers.push_back(s);
+	}
 	m_currentBackground = 0; //setting the background number
-}
-file.close();
 
-
-
-//reading button files
-file.open("../../TransformsAndDatafiles/Assets/spellingLevel" + std::to_string(level) + "Buttons.txt");
-if (file.is_open()) {
+	//buttons
 	for (int i = 0; i < numOfSounds; i++) {
 		float xPos, yPos, xSize, ySize;
 		getline(file, s);
@@ -60,25 +54,42 @@ if (file.is_open()) {
 	}
 }
 else {
+	std::cout << "cannot open sound file" << endl;
+}
+file.close();
+
+//reading background files
+/*file.open("../../TransformsAndDatafiles/Assets/spellingLevel" + std::to_string(level) + "Backgrounds.txt");
+if (file.is_open()) {
+	
+}
+file.close();
+
+
+
+//reading button files
+file.open("../../TransformsAndDatafiles/Assets/spellingLevel" + std::to_string(level) + "Buttons.txt");
+if (file.is_open()) {
+	
+}
+else {
 	std::cout << "cannot open button file\n";
 }
 file.close();
 
 
-for (int i = 0; i < numOfSounds; i++) {
-	sceneSoundManager.loadSound(vecOfSounds[i]);
-
-}
 //ANSWERS
 file.open("../../TransformsAndDatafiles/Assets/spellingLevel" + std::to_string(level) + "Answers.txt");
 if (file.is_open()) {
-	for (int i = 0; i < numOfSounds * 2; i++) {
-		getline(file, s);
-		vecOfAnswers.push_back(s);
-	}
-	m_currentBackground = 0; //setting the background number
+	
 }
-file.close();
+file.close();*/
+
+
+for (int i = 0; i < numOfSounds + 1; i++) {
+	sceneSoundManager.loadSound(vecOfSounds[i]);
+
+}
 
 //back to menu button
 m_menuButton = new Button(20.0f, 10.0f, 225.0f, 50.0f, "../../TransformsAndDatafiles/assets/Tellural.ttf", "Back to Menus", 30, sf::Color::Black);
@@ -215,18 +226,12 @@ int SpellingScene::update(sf::RenderWindow & window, sf::Clock &gameClock)
 							if (vecOfIButtons[m_currentBackground]->m_rectangle.getFillColor() != transparentGreen) {
 								vecOfIButtons[m_currentBackground]->m_rectangle.setFillColor(transparentGreen);
 								numOfCorrectAnswers++;
-	    						correctAnswers->setMessage(std::to_string(numOfCorrectAnswers) + "/" + std::to_string(numOfSounds)); 							
+	    						correctAnswers->setMessage(std::to_string(numOfCorrectAnswers) + "/" + std::to_string(numOfSounds)); 	
+								sceneSoundManager.playSound(numOfSounds);
 							}
 							return 0;
 						}
 						else {
-							/*for (i = 0; i < typeIn.size(); i++)
-							{
-								if (typeIn.begin() + i != vecOfAnswers[m_currentBackground].begin() + i)
-								{
-									answer->changeCharColour(i);
-								}
-							}*/
 							gameClock.restart();
 							gotIncorrect = true;
 						}

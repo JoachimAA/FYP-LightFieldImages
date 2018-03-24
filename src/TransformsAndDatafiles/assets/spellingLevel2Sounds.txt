@@ -1,5 +1,0 @@
-4
-../../TransformsAndDatafiles/assets/EggSpelling.wav
-../../TransformsAndDatafiles/assets/ForkSpelling.wav
-../../TransformsAndDatafiles/assets/GlassSpelling.wav
-../../TransformsAndDatafiles/assets/HatSpelling.wav

@@ -1,5 +1,0 @@
-4
-../../TransformsAndDatafiles/assets/PenSpelling.wav
-../../TransformsAndDatafiles/assets/StaplerSpelling.wav
-../../TransformsAndDatafiles/assets/ScissorsSpelling.wav
-../../TransformsAndDatafiles/assets/RulerSpelling.wav

@@ -1,8 +1,0 @@
-Apple
-apple
-Banana
-banana
-Car
-car
-Duck
-duck

@@ -1,10 +1,10 @@
 2
-../../TransformsAndDatafiles/assets/DiplodocusPractice.wav
 ../../TransformsAndDatafiles/assets/AnkylosaurusPractice.wav
-Diplodocus
+../../TransformsAndDatafiles/assets/DiplodocusPractice.wav
 Ankylosaurus
-../../TransformsAndDatafiles/assets/DiplodocusFocus.jpg
+Diplodocus
 ../../TransformsAndDatafiles/assets/AnkylosaurusFocus.jpg
+../../TransformsAndDatafiles/assets/DiplodocusFocus.jpg
 220 
 400
 150
