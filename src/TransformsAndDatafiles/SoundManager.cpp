@@ -9,7 +9,7 @@ void SoundManager::loadSound(std::string filename)
 	{
 		std::cout << "couldn't load sound/n";
 	}
-	m_gameSounds.push_back(m_gameSound);
+	m_gameSounds.push_back(m_gameSound);//put into sound vector
 }
 
 void SoundManager::playSound(int soundNum)

@@ -21,13 +21,9 @@ using namespace std;
 		void render(sf::RenderWindow &window);
 	private:
 
-		bool play = true;
-		bool game = false;
-
 		SceneManager* m_sceneManager;
-		sf::Clock gameClock;
-
-		sf::RenderWindow window;
+		sf::Clock m_gameClock;  //gameclock for timing
+		sf::RenderWindow m_window;
 
 	};
 

@@ -24,9 +24,6 @@
     <ClCompile Include="..\..\TransformsAndDatafiles\SoundManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\TransformsAndDatafiles\Scene.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\TransformsAndDatafiles\SplashScreen.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>

@@ -17,7 +17,5 @@ public :
 	virtual void render(sf::RenderWindow &window) = 0;
 	virtual int update(sf::RenderWindow &window, sf::Clock &gameClock) = 0;
 	virtual void handleInput(sf::Event &ev) = 0;
-	//m_background
-
 
 };

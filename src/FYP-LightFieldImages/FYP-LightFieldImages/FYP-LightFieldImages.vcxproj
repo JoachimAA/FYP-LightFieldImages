@@ -125,7 +125,6 @@
     <ClCompile Include="..\..\TransformsAndDatafiles\main.cpp" />
     <ClCompile Include="..\..\TransformsAndDatafiles\Button.cpp" />
     <ClCompile Include="..\..\TransformsAndDatafiles\Rectangle.cpp" />
-    <ClCompile Include="..\..\TransformsAndDatafiles\Scene.cpp" />
     <ClCompile Include="..\..\TransformsAndDatafiles\SceneManager.cpp" />
     <ClCompile Include="..\..\TransformsAndDatafiles\SoundManager.cpp" />
     <ClCompile Include="..\..\TransformsAndDatafiles\SpellingScene.cpp" />

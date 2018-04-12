@@ -10,9 +10,9 @@ public:
 	void render(sf::RenderWindow &window);
 	void setMessage(std::string message);
 
-	sf::Font m_font;
-	sf::Text m_text;
+	sf::Font m_font; //font used 
+	sf::Text m_text;  
 
-	std::vector<std::string> vecOfFonts;
+	
 
 };

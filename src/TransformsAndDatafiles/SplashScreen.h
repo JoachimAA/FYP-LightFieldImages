@@ -13,9 +13,9 @@ public:
 
 
 	Button* m_spellingButton;
-	Button* m_alphabetButton;
-	Background* m_background;
-	Text * m_play;
+	Button* m_alphabetButton;   //buttons for splash screen 
+	Background* m_background;  //background
+
 
 
 private:

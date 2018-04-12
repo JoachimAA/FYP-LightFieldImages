@@ -6,10 +6,10 @@
 using namespace std;
 
 Game::Game() :
-	window(sf::VideoMode(1280, 720), "FYP-Light_Field_Images")
+	m_window(sf::VideoMode(1280, 720), "FYP-Light_Field_Images")
 {
 	//setting frame rate
-	window.setFramerateLimit(60);
+	m_window.setFramerateLimit(60);
 }
 
 void Game::load()
@@ -18,30 +18,28 @@ void Game::load()
 	//loading the current scene
 	m_sceneManager->loadScene();
 
-//	m_soundManager.loadSound();
-
 	run();
 }
 
 
 void Game::run()
 {
-	while (window.isOpen())
+	while (m_window.isOpen())
 	{
 		sf::Event ev;
 		//Handle input
-		while (window.pollEvent(ev))
+		while (m_window.pollEvent(ev))
 		{
-			if (ev.type == sf::Event::Closed) window.close();
-			if (ev.type == sf::Event::TextEntered)
+			if (ev.type == sf::Event::Closed) m_window.close(); // if the window is closed close the window
+			if (ev.type == sf::Event::TextEntered) //if text is entered
 			{
-					m_sceneManager->handleInput(ev);
+					m_sceneManager->handleInput(ev);  //handle inputs via the scene 
 			}
 		}
 
 		
-		update(window ,gameClock);
-		render(window);
+		update(m_window ,m_gameClock);  //update game  
+		render(m_window);  //render game
 	}
 
 

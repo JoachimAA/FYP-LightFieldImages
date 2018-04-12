@@ -3,12 +3,12 @@
 
 float Rectangle::getXMax()
 {
-	return xMax;
+	return m_xMax;
 }
 
 float Rectangle::getYMax()
 {
-	return yMax;
+	return m_yMax;
 }
 
 void Rectangle::render(sf::RenderWindow & window)
@@ -21,6 +21,7 @@ void Rectangle::renderSprite(sf::RenderWindow & window)
 	window.draw(m_buttonSprite);
 }
 
+//load a texture
 void Rectangle::loadTexture(std::string texture)
 {
 	if (!m_texture.loadFromFile(texture))
@@ -29,9 +30,10 @@ void Rectangle::loadTexture(std::string texture)
 	}
 }
 
+//check for mouse click
 bool Rectangle::mouseClicked(sf::RenderWindow & window)
 {
-	if (m_mouse.isButtonPressed(m_mouse.Left))
+	if (m_mouse.isButtonPressed(m_mouse.Left))  //if pressed by left mouse
 	{
 		return true;
 	}
@@ -40,9 +42,9 @@ bool Rectangle::mouseClicked(sf::RenderWindow & window)
 		return false;
 	}
 }
-
+//rotates sprite
 void Rectangle::rotateSprite(float angle)
 {
-	m_buttonSprite.rotate(angle);
-	m_buttonSprite.move(sf::Vector2f(xMax - xPosition, yMax - yPosition));
+	m_buttonSprite.rotate(angle);  //rotate by angle
+	m_buttonSprite.move(sf::Vector2f(m_xMax - m_xPosition, m_yMax - m_yPosition));  //moves so that it doesnt move when rotating
 }

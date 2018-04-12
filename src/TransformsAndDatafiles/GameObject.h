@@ -4,8 +4,8 @@ class GameObject
 {
 public:
 	//top left
-	float xPosition;
-	float yPosition;
+	float m_xPosition;
+	float m_yPosition;
 
 	float getXPosition();
 	float getYPosition();

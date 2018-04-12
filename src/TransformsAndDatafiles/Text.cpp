@@ -17,6 +17,7 @@ void Text::render(sf::RenderWindow & window)
 
 }
 
+//set new message of text
 void Text::setMessage(std::string message)
 {
 	m_text.setString(message);

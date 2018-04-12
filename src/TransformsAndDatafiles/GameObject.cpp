@@ -2,10 +2,10 @@
 
 float GameObject::getXPosition()
 {
-	return xPosition;
+	return m_xPosition;
 }
 
 float GameObject::getYPosition()
 {
-	return yPosition;
+	return m_yPosition;
 }

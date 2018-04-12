@@ -24,7 +24,7 @@ void SplashScreen::render(sf::RenderWindow &window)
 int SplashScreen::update(sf::RenderWindow &window, sf::Clock &gameClock)
 {
 
-	//checks button for mouse hoveing over and then clicking
+	//checks button for mouse hovering over and then clicking
 	if(m_spellingButton->mouseHovering(window) == true)
 	{
 		if (m_spellingButton->mouseClicked(window) == true)

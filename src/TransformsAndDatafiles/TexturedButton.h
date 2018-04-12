@@ -8,5 +8,9 @@ public:
 	TexturedButton(float xPos, float yPos, float xScale, float yScale, std::string texture);
 	bool mouseHovering(sf::RenderWindow &window);
 	sf::Texture m_buttonTexture;
+
+
 private:
+
+
 };

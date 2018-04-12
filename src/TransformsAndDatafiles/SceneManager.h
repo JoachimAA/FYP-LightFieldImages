@@ -20,9 +20,10 @@ public:
 	void backToMenu();
 
 	int m_currentScene;
-	int m_spellingLevels = 4;
+	int m_spellingLevels = 4; //number of each level
 	int m_AlphabetLevels = 4;
-	int updateReturn;
+	int m_updateReturn;   //updates the return value so if a button is pressed you know where to go 
 
-	std::vector<Scene*> m_scenes; 
+	std::vector<Scene*> m_scenes; //stores all scenes
+private:
 };

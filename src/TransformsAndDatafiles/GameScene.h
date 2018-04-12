@@ -19,23 +19,24 @@ public:
 	Button* m_menuButton;
 
 
-	vector<Background*> vecOfBackgrounds;
-	vector<InvisibleButton*> vecOfIButtons;
-	vector<std::string> vecOfSounds;
-//	vector<MenuButton*>;
+	vector<Background*> m_vecOfBackgrounds;  //holds the scene backgrounds
+	vector<InvisibleButton*> m_vecOfIButtons;  //holds the values of the invisible buttons
+	vector<std::string> m_vecOfSounds;  //holds the scene sounds
 
-	int m_currentBackground;
-	int numOfSounds;
+	int m_currentBackground;  //current background needing to be displayed
+	int m_numOfSounds;  //holds number of sounds 
 
-	bool firstLevel = true;
-	bool lastLevel = true;
+	bool m_firstLevel = true;  //booleons to know when your on the first of last level
+	bool m_lastLevel = true;
 
-	TexturedButton * m_nextLevel;
+	TexturedButton * m_nextLevel;  //textured buttons in the game
 	TexturedButton * m_previousLevel;
 
 	ifstream file;
-	string s;
+	string s;        //for file reading
 	stringstream ss;
 
-	sf::Mouse m_mouse;
+	sf::Mouse m_mouse;  //mouse to get mouse clicks
+
+private:
 };

@@ -16,9 +16,9 @@ public:
 	void playSound(int soundNum);
 
 	
-    std::vector<sf::SoundBuffer> m_gameSounds;
+    std::vector<sf::SoundBuffer> m_gameSounds;  //stores game sounds
 	sf::Sound m_sound;
-	sf::SoundBuffer m_gameSound;
+	sf::SoundBuffer m_gameSound;   //buffer for loading sounds
 
 private:
 

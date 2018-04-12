@@ -8,12 +8,12 @@ class Rectangle : public GameObject
 public:
 
 	sf::RectangleShape m_rectangle;
-	sf::Sprite m_buttonSprite;
-	sf::Texture m_texture;
+	sf::Sprite m_buttonSprite;  //sprite for button
+	sf::Texture m_texture;  //texture for button
 	sf::Mouse m_mouse;
 
-	float xMax;
-	float yMax;
+	float m_xMax;
+	float m_yMax;
 
 	float getXMax();
 	float getYMax();

@@ -8,8 +8,8 @@ class PracticeScene : public GameScene
 	void render(sf::RenderWindow &window) override;
 	int update(sf::RenderWindow &window, sf::Clock &gameClock) override;
 
-	vector<string> vecOfHints;
-	Text * m_hints;
+	vector<string> m_vecOfHints;  //stores hints
+	Text * m_hints;   //text for the hint to come up on screen
 
-	bool displayHint;
+	bool m_displayHint;  //display hint
 };
